@@ -1,5 +1,5 @@
 .vs
-
 *-backups
 Production/PCB/*/
 ~*
+.DS_Store
