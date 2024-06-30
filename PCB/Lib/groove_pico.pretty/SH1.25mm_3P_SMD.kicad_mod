@@ -298,6 +298,20 @@
 		(layer "F.Fab")
 		(uuid "f311af97-34b3-4f95-a4c3-231b04ae45a7")
 	)
+	(pad "" smd roundrect
+		(at -3.1 -1.4)
+		(size 1 2.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "1f0b7060-5fb7-4768-8bc7-307ff16e42b3")
+	)
+	(pad "" smd roundrect
+		(at 3.1 -1.4)
+		(size 1 2.8)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "73b11066-fc33-4eb1-8581-a785b08cd2f1")
+	)
 	(pad "1" smd roundrect
 		(at -1.25 1.95)
 		(size 0.6 1.7)
@@ -318,20 +332,6 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.25)
 		(uuid "0300a76e-5a3e-40a3-b666-e324d66289f4")
-	)
-	(pad "MP" smd roundrect
-		(at -3.1 -1.4)
-		(size 1 2.8)
-		(layers "F.Cu" "F.Paste" "F.Mask")
-		(roundrect_rratio 0.25)
-		(uuid "1f0b7060-5fb7-4768-8bc7-307ff16e42b3")
-	)
-	(pad "MP" smd roundrect
-		(at 3.1 -1.4)
-		(size 1 2.8)
-		(layers "F.Cu" "F.Paste" "F.Mask")
-		(roundrect_rratio 0.25)
-		(uuid "73b11066-fc33-4eb1-8581-a785b08cd2f1")
 	)
 	(model "${KICAD8_3DMODEL_DIR}/Connector_JST.3dshapes/JST_GH_BM03B-GHS-TBT_1x03-1MP_P1.25mm_Vertical.wrl"
 		(hide yes)
