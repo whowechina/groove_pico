@@ -223,7 +223,7 @@
 		(remove_unused_layers no)
 		(uuid "76fd8d09-0bf9-4f2a-bc7f-bb9c6dc54072")
 	)
-	(model "/Users/whowe/pico/groove_pico/PCB/Lib/3dmodels/530470310.stp"
+	(model "${KIPRJMOD}/../Lib/3dmodels/530470310.stp"
 		(offset
 			(xyz 0 1.2 5.25)
 		)

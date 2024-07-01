@@ -4017,6 +4017,12 @@
 		(uuid "04b9a7d9-e6b3-4bcf-914c-71e8a4956595")
 	)
 	(junction
+		(at 135.89 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06b6a67e-3e4c-4988-8328-0b59f02e4585")
+	)
+	(junction
 		(at 350.52 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4041,12 +4047,6 @@
 		(uuid "0c664a08-102c-4ed8-9c5e-589bf523cfe9")
 	)
 	(junction
-		(at 379.73 186.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0f72a851-12d8-4a52-bd9b-0dc17c7f7d89")
-	)
-	(junction
 		(at 346.71 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4057,12 +4057,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1198fd87-88c7-4493-a187-c1f0dbda4547")
-	)
-	(junction
-		(at 367.03 179.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "12ad03ba-3854-4d7f-97f1-fa109446ab81")
 	)
 	(junction
 		(at 177.8 158.75)
@@ -4081,6 +4075,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "188c0ada-cc47-4599-903b-ba55aabb43fe")
+	)
+	(junction
+		(at 127 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a9d6556-3139-43d5-a6b5-f87fcd54e591")
 	)
 	(junction
 		(at 241.3 213.36)
@@ -4141,12 +4141,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f426236-5a84-460f-be79-acfed60fa127")
-	)
-	(junction
-		(at 379.73 179.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3073af90-c94b-40e9-8f1b-c2af1bec099d")
 	)
 	(junction
 		(at 190.5 158.75)
@@ -4219,6 +4213,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3f78b29b-609b-4fd8-aef4-d568026016c6")
+	)
+	(junction
+		(at 367.03 179.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4024413c-6664-4a4d-ad91-83d0fe0e58c2")
 	)
 	(junction
 		(at 165.1 198.12)
@@ -4311,12 +4311,6 @@
 		(uuid "52cfc91a-4a12-479f-985b-bafc4d7bb835")
 	)
 	(junction
-		(at 140.97 205.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56387453-b690-4218-8468-06700b0a5680")
-	)
-	(junction
 		(at 254 243.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4357,6 +4351,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5db844a5-ab0d-4dcb-bcbb-774ea5ce5f67")
+	)
+	(junction
+		(at 102.87 214.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "654a2ef0-fcc3-48f1-9516-7865f46802aa")
+	)
+	(junction
+		(at 379.73 179.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65bb8474-6f3a-4a49-999f-270326ae6bd4")
 	)
 	(junction
 		(at 279.4 243.84)
@@ -4431,10 +4437,10 @@
 		(uuid "74718781-e7a3-4a8c-a8f6-5ed98019907e")
 	)
 	(junction
-		(at 271.78 127)
+		(at 271.145 127)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7756cdcf-fefc-41e9-8b42-1adf5580e3fa")
+		(uuid "793847c2-7f47-4fa4-9a18-3bdff66ab485")
 	)
 	(junction
 		(at 375.92 104.14)
@@ -4479,6 +4485,12 @@
 		(uuid "89a87d03-dbbe-4c56-bf67-54241c706c5a")
 	)
 	(junction
+		(at 367.03 186.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ae247a0-d879-443b-8080-f563a4e4a24e")
+	)
+	(junction
 		(at 266.7 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4513,12 +4525,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8fd82111-57d0-4aac-bc8d-7d2557393ade")
-	)
-	(junction
-		(at 127 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "93f1d9f9-b454-4a21-9fcc-26a1f0f00ec9")
 	)
 	(junction
 		(at 203.2 143.51)
@@ -4581,12 +4587,6 @@
 		(uuid "a76c43b1-fc50-42b7-b1e8-3a0366a9120b")
 	)
 	(junction
-		(at 135.89 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "aab8e4eb-8dc9-4371-ba57-845fe31b3b9e")
-	)
-	(junction
 		(at 266.7 198.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4599,22 +4599,10 @@
 		(uuid "aea180d7-f585-46d4-9c31-bfd0b0006e88")
 	)
 	(junction
-		(at 134.62 236.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b0fd4aac-e1af-44fd-ae61-af27c5dde820")
-	)
-	(junction
 		(at 215.9 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b1f5e7a9-a85b-4ecf-b32e-dafbc090a472")
-	)
-	(junction
-		(at 144.78 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b9f80644-47e3-4dfd-9fa2-91fb1ea80d72")
 	)
 	(junction
 		(at 323.85 114.3)
@@ -4665,12 +4653,6 @@
 		(uuid "c92af3a3-a185-46db-ba3c-fae6e5282da0")
 	)
 	(junction
-		(at 367.03 186.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cd070095-a97f-4d62-9e15-7d993e5a762e")
-	)
-	(junction
 		(at 146.05 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4701,6 +4683,12 @@
 		(uuid "d52f76dd-871b-4684-8c74-432605ba5d01")
 	)
 	(junction
+		(at 138.43 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8eda706-cfd4-42a4-8c35-b4a0d9d9d67e")
+	)
+	(junction
 		(at 318.77 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4711,6 +4699,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db3ce2b1-4973-4b40-9ab9-09dba113c52d")
+	)
+	(junction
+		(at 379.73 186.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db55a1f7-705c-428f-af3b-453e40fef441")
 	)
 	(junction
 		(at 346.71 99.06)
@@ -4735,6 +4729,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e2a56314-82bc-45de-8098-087df0b4500d")
+	)
+	(junction
+		(at 144.78 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e357bc20-0fa8-48ef-955e-4e608ac6d1fd")
 	)
 	(junction
 		(at 236.22 88.9)
@@ -4843,16 +4843,12 @@
 		(uuid "4a841462-8c86-4850-9dd9-3ab9c50d54e4")
 	)
 	(no_connect
-		(at 173.99 93.98)
-		(uuid "5fc63835-ddcd-442d-a40b-050742b1f663")
-	)
-	(no_connect
-		(at 173.99 104.14)
-		(uuid "683d6f6d-0707-4832-96e6-e0d4c4831ae9")
-	)
-	(no_connect
 		(at 173.99 81.28)
 		(uuid "7dbda039-0601-4e59-9051-3f9081a1a81d")
+	)
+	(no_connect
+		(at 298.45 236.22)
+		(uuid "82af0ada-a795-4519-ad2c-2d6124017cd7")
 	)
 	(no_connect
 		(at 247.65 180.34)
@@ -4867,6 +4863,10 @@
 		(uuid "9d4bd2de-ea47-4013-ab07-0df326909772")
 	)
 	(no_connect
+		(at 298.45 205.74)
+		(uuid "9ee70799-64af-49d5-8bf3-a21b75dacb26")
+	)
+	(no_connect
 		(at 132.08 41.91)
 		(uuid "a001397e-f0ff-42b9-b05e-0a81237f71ed")
 	)
@@ -4877,14 +4877,6 @@
 	(no_connect
 		(at 173.99 109.22)
 		(uuid "b84743b3-3e36-446a-b39a-dca5cd4b9c30")
-	)
-	(no_connect
-		(at 209.55 76.2)
-		(uuid "ba58ab36-f6d5-4961-a9a4-40867c047f77")
-	)
-	(no_connect
-		(at 173.99 101.6)
-		(uuid "cea60df6-c804-4fb8-8bbc-c450e3afbb00")
 	)
 	(no_connect
 		(at 173.99 96.52)
@@ -4938,17 +4930,17 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 127) (xy 273.685 127)
+			(xy 367.03 179.07) (xy 379.73 179.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "02514ec4-6af7-424a-88eb-88312ef24408")
+		(uuid "04e080c8-77c5-4ba2-8e0a-efc96a118f22")
 	)
 	(wire
 		(pts
-			(xy 144.78 83.82) (xy 144.78 87.63)
+			(xy 144.78 83.82) (xy 144.78 85.09)
 		)
 		(stroke
 			(width 0)
@@ -5048,6 +5040,16 @@
 	)
 	(wire
 		(pts
+			(xy 138.43 49.53) (xy 213.36 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a023a63-5711-4065-a18a-980c5e08f76d")
+	)
+	(wire
+		(pts
 			(xy 215.9 243.84) (xy 228.6 243.84)
 		)
 		(stroke
@@ -5128,7 +5130,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 151.13) (xy 158.75 151.13)
+			(xy 148.59 151.13) (xy 158.75 151.13)
 		)
 		(stroke
 			(width 0)
@@ -5238,7 +5240,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 92.71) (xy 135.89 106.68)
+			(xy 135.89 90.17) (xy 135.89 93.98)
 		)
 		(stroke
 			(width 0)
@@ -5378,16 +5380,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 236.22) (xy 146.05 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b360dc6-7703-48e9-9b36-55d62796bf82")
-	)
-	(wire
-		(pts
 			(xy 185.42 247.65) (xy 215.9 247.65)
 		)
 		(stroke
@@ -5505,16 +5497,6 @@
 			(type default)
 		)
 		(uuid "33fd39c9-da12-40e2-ae8a-452c10daedbd")
-	)
-	(wire
-		(pts
-			(xy 127 106.68) (xy 127 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3522e2df-d91e-48f2-aa3c-d7a2d4725e3f")
 	)
 	(wire
 		(pts
@@ -5658,16 +5640,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 111.76) (xy 134.62 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "413a0c8d-72c0-40be-8549-0e417dc02455")
-	)
-	(wire
-		(pts
 			(xy 209.55 93.98) (xy 247.65 93.98)
 		)
 		(stroke
@@ -5748,6 +5720,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 104.14) (xy 173.99 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a52c124-4c05-4a2c-9d43-f1dd5f273428")
+	)
+	(wire
+		(pts
 			(xy 146.05 44.45) (xy 144.78 44.45)
 		)
 		(stroke
@@ -5765,6 +5747,16 @@
 			(type default)
 		)
 		(uuid "4b5e1bf7-998b-4f90-b4bf-082552f5d178")
+	)
+	(wire
+		(pts
+			(xy 379.73 186.69) (xy 392.43 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c064e46-270b-475c-8508-b785291a46de")
 	)
 	(wire
 		(pts
@@ -5805,6 +5797,26 @@
 			(type default)
 		)
 		(uuid "4fbafea1-f6ec-42ea-a5b3-e8410a1add48")
+	)
+	(wire
+		(pts
+			(xy 143.51 118.11) (xy 140.97 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52334c51-c516-422e-9851-b20c97894419")
+	)
+	(wire
+		(pts
+			(xy 260.985 127) (xy 271.145 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52838a4e-5be1-404a-8363-12cab3008e3c")
 	)
 	(wire
 		(pts
@@ -5875,36 +5887,6 @@
 			(type default)
 		)
 		(uuid "5b8c547f-be6f-4d6b-a60f-7359127a7481")
-	)
-	(wire
-		(pts
-			(xy 140.97 205.74) (xy 140.97 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e7cd2cb-aab5-4c40-b84f-974241bb5800")
-	)
-	(wire
-		(pts
-			(xy 135.89 106.68) (xy 127 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ef84b39-118f-4729-98cd-de28fd813d48")
-	)
-	(wire
-		(pts
-			(xy 173.99 106.68) (xy 144.78 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fdd94ee-7392-46bd-93e8-41eef42e13a3")
 	)
 	(wire
 		(pts
@@ -6008,7 +5990,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 111.76) (xy 134.62 111.76)
+			(xy 173.99 111.76) (xy 135.89 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6108,16 +6090,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 106.68) (xy 135.89 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7075376d-6945-4b06-bbf5-b36daa03a6eb")
-	)
-	(wire
-		(pts
 			(xy 318.77 99.06) (xy 318.77 109.22)
 		)
 		(stroke
@@ -6125,6 +6097,16 @@
 			(type default)
 		)
 		(uuid "717bc5a8-395d-4659-8a3e-13f35d44a2a1")
+	)
+	(wire
+		(pts
+			(xy 295.91 243.84) (xy 292.1 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72064f5e-45ff-4a2a-a9ca-c4db19b26af2")
 	)
 	(wire
 		(pts
@@ -6148,7 +6130,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 92.71) (xy 144.78 106.68)
+			(xy 144.78 90.17) (xy 144.78 93.98)
 		)
 		(stroke
 			(width 0)
@@ -6175,6 +6157,16 @@
 			(type default)
 		)
 		(uuid "74f8fd09-7918-492e-8ec7-33904446aca2")
+	)
+	(wire
+		(pts
+			(xy 271.145 127) (xy 273.685 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "759ce35b-3076-4e64-a205-704fa7136362")
 	)
 	(wire
 		(pts
@@ -6205,6 +6197,16 @@
 			(type default)
 		)
 		(uuid "773c8708-bb3c-44cd-8983-c8269722a231")
+	)
+	(wire
+		(pts
+			(xy 367.03 186.69) (xy 379.73 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77c46851-9aac-4418-a203-de6fb7e6c54c")
 	)
 	(wire
 		(pts
@@ -6248,7 +6250,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 78.74) (xy 135.89 87.63)
+			(xy 135.89 78.74) (xy 135.89 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6305,6 +6307,16 @@
 			(type default)
 		)
 		(uuid "7baa45d7-7e6e-40d4-a6aa-d6fb206832cd")
+	)
+	(wire
+		(pts
+			(xy 143.51 118.11) (xy 143.51 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dddd9f4-3f1a-46bc-bc30-3b62fae78283")
 	)
 	(wire
 		(pts
@@ -6365,6 +6377,16 @@
 			(type default)
 		)
 		(uuid "881c45f0-7f0f-42ba-a8fb-cb3225f62486")
+	)
+	(wire
+		(pts
+			(xy 162.56 101.6) (xy 173.99 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88372bdf-b7d7-434d-9cf6-34b525695009")
 	)
 	(wire
 		(pts
@@ -6448,7 +6470,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 116.84) (xy 173.99 116.84)
+			(xy 148.59 116.84) (xy 173.99 116.84)
 		)
 		(stroke
 			(width 0)
@@ -6458,7 +6480,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 62.23) (xy 138.43 39.37)
+			(xy 138.43 62.23) (xy 138.43 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6498,17 +6520,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 127) (xy 271.78 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9061067d-0cbc-4617-8344-e9bb3f52e0b8")
-	)
-	(wire
-		(pts
-			(xy 271.78 128.27) (xy 271.78 127)
+			(xy 271.145 128.27) (xy 271.145 127)
 		)
 		(stroke
 			(width 0)
@@ -6578,16 +6590,6 @@
 	)
 	(wire
 		(pts
-			(xy 367.03 186.69) (xy 379.73 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "989e0d53-f51c-47ce-b761-1a1436bbf581")
-	)
-	(wire
-		(pts
 			(xy 323.85 93.98) (xy 323.85 104.14)
 		)
 		(stroke
@@ -6625,16 +6627,6 @@
 			(type default)
 		)
 		(uuid "9a4a53bb-c99c-4b65-b463-255f91c714b2")
-	)
-	(wire
-		(pts
-			(xy 146.05 205.74) (xy 140.97 205.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a990099-3ef6-41d9-848c-663dbe9b0e7c")
 	)
 	(wire
 		(pts
@@ -6698,16 +6690,6 @@
 	)
 	(wire
 		(pts
-			(xy 367.03 179.07) (xy 379.73 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a021ae49-0544-42cf-9495-3bd73c4ef760")
-	)
-	(wire
-		(pts
 			(xy 215.9 187.96) (xy 228.6 187.96)
 		)
 		(stroke
@@ -6718,7 +6700,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 76.2) (xy 127 87.63)
+			(xy 127 76.2) (xy 127 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6778,16 +6760,6 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 186.69) (xy 392.43 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa6e4fcf-cea2-4924-9312-7b999d796d06")
-	)
-	(wire
-		(pts
 			(xy 241.3 143.51) (xy 254 143.51)
 		)
 		(stroke
@@ -6795,6 +6767,16 @@
 			(type default)
 		)
 		(uuid "ac19ab51-dc72-4bbc-b35f-a7d4ea734134")
+	)
+	(wire
+		(pts
+			(xy 135.89 93.98) (xy 144.78 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac6c878e-d324-409b-b5ec-417a13bd8364")
 	)
 	(wire
 		(pts
@@ -6888,7 +6870,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 148.59) (xy 147.32 151.13)
+			(xy 148.59 139.7) (xy 148.59 151.13)
 		)
 		(stroke
 			(width 0)
@@ -6948,13 +6930,23 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 233.68) (xy 134.62 236.22)
+			(xy 127 93.98) (xy 135.89 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b91448ce-dd04-48c2-aa5d-593cbd7fe1b0")
+		(uuid "b9ba358f-8c3c-4ad5-aa23-d31adb413991")
+	)
+	(wire
+		(pts
+			(xy 138.43 49.53) (xy 138.43 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbb4323c-953e-45e9-805f-c3b0ace69e1a")
 	)
 	(wire
 		(pts
@@ -6978,7 +6970,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 198.12) (xy 140.97 114.3)
+			(xy 132.08 118.11) (xy 135.89 118.11)
 		)
 		(stroke
 			(width 0)
@@ -6998,6 +6990,26 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 93.98) (xy 173.99 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bef37a9e-2084-4eb1-a54f-82ab91eaa929")
+	)
+	(wire
+		(pts
+			(xy 379.73 179.07) (xy 392.43 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf27439c-a5d8-46c0-95ee-ac4a949d1e86")
+	)
+	(wire
+		(pts
 			(xy 228.6 198.12) (xy 241.3 198.12)
 		)
 		(stroke
@@ -7008,7 +7020,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 114.3) (xy 173.99 114.3)
+			(xy 143.51 114.3) (xy 173.99 114.3)
 		)
 		(stroke
 			(width 0)
@@ -7038,6 +7050,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 214.63) (xy 102.87 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2ae21aa-c9c7-4219-ade0-f07f7720e08e")
+	)
+	(wire
+		(pts
 			(xy 292.1 143.51) (xy 304.8 143.51)
 		)
 		(stroke
@@ -7045,6 +7067,16 @@
 			(type default)
 		)
 		(uuid "c3296fed-fb60-42c9-b115-da9e736caa2b")
+	)
+	(wire
+		(pts
+			(xy 260.985 119.38) (xy 260.985 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3cf097d-3c40-4138-9936-026c64053db6")
 	)
 	(wire
 		(pts
@@ -7158,6 +7190,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 93.98) (xy 127 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cff562cd-a938-4411-893c-dd497fd8b254")
+	)
+	(wire
+		(pts
 			(xy 241.3 228.6) (xy 254 228.6)
 		)
 		(stroke
@@ -7205,6 +7247,26 @@
 			(type default)
 		)
 		(uuid "d78ca8ad-1019-4e37-bbf4-21cf789ef0f1")
+	)
+	(wire
+		(pts
+			(xy 130.81 111.76) (xy 129.54 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d88d196b-add1-4f17-8d13-c574ae9c2dbd")
+	)
+	(wire
+		(pts
+			(xy 213.36 49.53) (xy 213.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da778f51-2d8e-4dc2-9546-986df2bd78e8")
 	)
 	(wire
 		(pts
@@ -7368,6 +7430,16 @@
 	)
 	(wire
 		(pts
+			(xy 295.91 213.36) (xy 292.1 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f290ce0d-e559-4c43-9c59-c79787ef1960")
+	)
+	(wire
+		(pts
 			(xy 354.33 186.69) (xy 367.03 186.69)
 		)
 		(stroke
@@ -7448,16 +7520,6 @@
 	)
 	(wire
 		(pts
-			(xy 379.73 179.07) (xy 392.43 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6d70fc7-8394-4781-87b4-73278e54564e")
-	)
-	(wire
-		(pts
 			(xy 354.33 179.07) (xy 367.03 179.07)
 		)
 		(stroke
@@ -7478,7 +7540,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 116.84) (xy 147.32 143.51)
+			(xy 148.59 116.84) (xy 148.59 134.62)
 		)
 		(stroke
 			(width 0)
@@ -7515,6 +7577,16 @@
 			(type default)
 		)
 		(uuid "fe0a6eaf-75a3-4903-a944-439511a06fd8")
+	)
+	(wire
+		(pts
+			(xy 213.36 76.2) (xy 209.55 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe1d0a2c-d5e3-4e36-ae69-2ac5e44c3b48")
 	)
 	(wire
 		(pts
@@ -7589,17 +7661,6 @@
 			(justify left bottom)
 		)
 		(uuid "5b337d05-8efc-4fcd-b429-50076c936bdb")
-	)
-	(label "RGB"
-		(at 147.32 127.635 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5c805e5a-70e0-421d-959f-2a8d2e4cc4d4")
 	)
 	(label "RY"
 		(at 353.06 121.92 0)
@@ -7756,6 +7817,84 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
+		(at 138.43 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0058b7e4-e584-476f-a1b4-78f40813fc1b")
+		(property "Reference" "R4"
+			(at 139.7 116.078 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10"
+			(at 139.7 120.396 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23186"
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb16361a-5a05-4b17-a7e0-f8f2e8103122")
+		)
+		(pin "2"
+			(uuid "fb0f1f2c-d3cd-4e01-9004-7ed89b09e407")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
 		(at 142.24 44.45 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7860,7 +7999,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
+		(property "Footprint" "groove_pico:Solder_1P_S"
 			(at 152.4 208.28 0)
 			(effects
 				(font
@@ -7901,7 +8040,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 140.97 205.74 90)
+		(at 146.05 205.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7909,7 +8048,7 @@
 		(dnp no)
 		(uuid "02ec037f-496a-4ba9-9ed1-ed5ecdb60032")
 		(property "Reference" "J16"
-			(at 140.208 208.28 90)
+			(at 145.288 208.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7918,7 +8057,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 138.938 203.2 0)
+			(at 144.018 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7927,8 +8066,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
-			(at 140.97 200.66 0)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 146.05 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7937,7 +8076,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 200.66 0)
+			(at 146.05 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7946,7 +8085,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 140.97 205.74 0)
+			(at 146.05 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8323,6 +8462,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 295.91 213.36 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13f4eb6d-250b-4508-9d6d-b094dd8dd28c")
+		(property "Reference" "J27"
+			(at 300.99 213.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "G"
+			(at 297.942 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 295.91 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 295.91 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 295.91 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49ded0a8-cc32-4f5b-9d93-1eea59ccb519")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "groove_pico:WS2812B_Unified")
 		(at 266.7 151.13 0)
 		(unit 1)
@@ -8478,7 +8684,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 134.62 236.22 90)
+		(at 146.05 236.22 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8486,7 +8692,7 @@
 		(dnp no)
 		(uuid "1cf8b3ca-464a-45b6-aa61-a13e8a04fe2a")
 		(property "Reference" "J20"
-			(at 133.858 238.76 90)
+			(at 145.288 238.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8495,7 +8701,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 132.588 233.68 0)
+			(at 144.018 233.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8504,8 +8710,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
-			(at 134.62 231.14 0)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 146.05 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8514,7 +8720,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 134.62 231.14 0)
+			(at 146.05 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8523,7 +8729,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 134.62 236.22 0)
+			(at 146.05 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8696,7 +8902,6 @@
 	(symbol
 		(lib_id "agg:SWITCH_SPST")
 		(at 182.88 217.17 0)
-		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8704,7 +8909,7 @@
 		(dnp no)
 		(uuid "231d1850-60d7-4944-9d4f-bc4b851ac755")
 		(property "Reference" "SW4"
-			(at 180.848 219.456 0)
+			(at 184.912 219.456 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8713,7 +8918,7 @@
 			)
 		)
 		(property "Value" "SWITCH_SPST"
-			(at 184.1499 218.44 90)
+			(at 181.6101 218.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8829,72 +9034,6 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 152.4 228.6 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "24819307-76a9-4eba-8dba-2e834ec100a4")
-		(property "Reference" "#PWR020"
-			(at 152.4 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 152.4 224.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 152.4 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 152.4 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2c44f094-4720-4944-b3ab-ba0f75d62feb")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -9044,7 +9183,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 147.32 146.05 180)
+		(at 148.59 137.16 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9052,7 +9191,7 @@
 		(dnp no)
 		(uuid "292cdbe5-b008-4a69-a05b-438a6c5489ad")
 		(property "Reference" "R3"
-			(at 146.05 146.05 0)
+			(at 147.32 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9061,7 +9200,7 @@
 			)
 		)
 		(property "Value" "10"
-			(at 151.13 146.685 0)
+			(at 152.4 137.795 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9070,7 +9209,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 147.32 146.05 0)
+			(at 148.59 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9079,7 +9218,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 147.32 146.05 0)
+			(at 148.59 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9088,7 +9227,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 147.32 146.05 0)
+			(at 148.59 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9097,7 +9236,7 @@
 			)
 		)
 		(property "LCSC" "C23186"
-			(at 147.32 146.05 0)
+			(at 148.59 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9324,6 +9463,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 295.91 243.84 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "32afb6d4-726d-4f8e-a716-8e92b827d9e9")
+		(property "Reference" "J28"
+			(at 300.99 243.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "G"
+			(at 297.942 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 295.91 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 295.91 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 295.91 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ddfee178-723c-4c2e-883e-b4c839b572ce")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "groove_pico:ScrewHole")
 		(at 29.21 196.85 0)
 		(unit 1)
@@ -9530,6 +9736,76 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 379.73 182.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38f322ee-b8cb-4d83-9671-49da83e79392")
+		(property "Reference" "C7"
+			(at 382.905 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 382.905 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 380.6952 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 379.73 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 379.73 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4c15c8cb-a730-4692-9976-859c9ce53707")
+		)
+		(pin "2"
+			(uuid "328b9a45-6c9c-4528-a2a4-cc1f2d8b29f5")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -9749,6 +10025,73 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 132.08 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3dc19ae9-7a21-450c-9d80-01c6691e1ed0")
+		(property "Reference" "J17"
+			(at 131.318 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 130.048 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 132.08 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 132.08 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f31bd7f6-a2de-437b-bf4f-6fd09dd5b758")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J17")
 					(unit 1)
 				)
 			)
@@ -10006,7 +10349,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
+		(property "Footprint" "groove_pico:Solder_1P_S"
 			(at 154.94 212.09 0)
 			(effects
 				(font
@@ -10194,6 +10537,73 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 129.54 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "48a7039c-ad59-4f49-93a9-699eba3078a3")
+		(property "Reference" "J21"
+			(at 128.778 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 127.508 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d46b54a3-7b2b-447c-913e-0ac0d1522012")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J21")
 					(unit 1)
 				)
 			)
@@ -10413,76 +10823,6 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "agg:SWITCH_SPST")
-		(at 127 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4eb86ff0-9092-4cd2-b97b-c6e91c12748b")
-		(property "Reference" "SW1"
-			(at 127.635 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SWITCH_SPST"
-			(at 128.27 91.4399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "groove_pico:EVQP1K05M"
-			(at 127 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 127 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0d196b4-6940-4a5f-b1a6-a25455f3c38c")
-		)
-		(pin "2"
-			(uuid "4b0b2aab-ac3c-4870-be37-1a929fb55f87")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -11383,6 +11723,138 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 102.87 214.63 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "655d3b5b-ca39-4252-b7be-0f59aa19d258")
+		(property "Reference" "J25"
+			(at 107.95 214.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "V"
+			(at 104.902 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 102.87 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 102.87 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20b3fb8d-ead2-4edf-b095-3ee7920e02fb")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "69ec1a41-56e0-4e95-a058-4e725c975c6b")
+		(property "Reference" "#PWR021"
+			(at 127 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127.127 98.3742 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61652a23-96d0-4d63-87ac-631adc4a1767")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3VADC")
 		(at 236.22 69.85 0)
 		(unit 1)
@@ -11443,71 +11915,6 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 127 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "701c17ec-eed4-4cad-9f09-355db33ba5ae")
-		(property "Reference" "#PWR016"
-			(at 127 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 127.127 111.0742 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 127 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0724dc08-ea13-4db2-9295-27429fb648e3")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -11929,7 +12336,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 271.78 128.27 0)
+		(at 271.145 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11937,7 +12344,7 @@
 		(dnp no)
 		(uuid "77394de2-4c0c-4f9d-a212-457964087f67")
 		(property "Reference" "#PWR06"
-			(at 271.78 134.62 0)
+			(at 271.145 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11946,7 +12353,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 271.907 132.6642 0)
+			(at 271.272 132.6642 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11954,7 +12361,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 271.78 128.27 0)
+			(at 271.145 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11963,7 +12370,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.78 128.27 0)
+			(at 271.145 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11972,7 +12379,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 271.78 128.27 0)
+			(at 271.145 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12670,7 +13077,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
+		(property "Footprint" "groove_pico:Solder_1P_S"
 			(at 152.4 193.04 0)
 			(effects
 				(font
@@ -12776,44 +13183,43 @@
 		)
 	)
 	(symbol
-		(lib_id "agg:SWITCH_SPST")
-		(at 144.78 90.17 90)
+		(lib_id "Device:R_Small")
+		(at 133.35 111.76 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "93881eec-c40d-4cce-8823-93b905f50593")
-		(property "Reference" "SW3"
-			(at 145.415 90.17 90)
+		(uuid "8f60d3e8-4f2c-4fd9-a810-dee1fd8b182b")
+		(property "Reference" "R5"
+			(at 134.62 109.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "SWITCH_SPST"
-			(at 146.05 91.4399 90)
+		(property "Value" "10"
+			(at 134.62 114.046 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 133.35 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:EVQP1K05M"
-			(at 144.78 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 90.17 0)
+		(property "Datasheet" "~"
+			(at 133.35 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12822,7 +13228,16 @@
 			)
 		)
 		(property "Description" ""
-			(at 144.78 90.17 0)
+			(at 133.35 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23186"
+			(at 133.35 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12831,15 +13246,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e26e357e-67ec-4cd0-9c43-18660144dfed")
+			(uuid "2552d6e8-ca2d-4d75-abce-4a9370b13471")
 		)
 		(pin "2"
-			(uuid "15439030-358e-4426-bc97-087b9f785151")
+			(uuid "35368e7c-e1f5-4c4f-a133-81d92132ce15")
 		)
 		(instances
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "SW3")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -12958,35 +13373,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 379.73 182.88 0)
+		(lib_id "agg:SWITCH_SPST")
+		(at 144.78 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "948f739a-aaf3-4718-bf62-ede48174d0a5")
-		(property "Reference" "C7"
-			(at 382.905 181.6099 0)
+		(uuid "9585a52e-105d-4bce-a3fa-63e67c2cbcb7")
+		(property "Reference" "SW1"
+			(at 145.415 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 382.905 184.1499 0)
+		(property "Value" "SWITCH_SPST"
+			(at 146.05 88.8999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 380.6952 186.69 0)
+		(property "Footprint" "groove_pico:EVQP1K05M"
+			(at 144.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12994,8 +13409,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 379.73 182.88 0)
+		(property "Datasheet" ""
+			(at 144.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13004,7 +13419,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 379.73 182.88 0)
+			(at 144.78 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13013,15 +13428,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "55566533-eb27-473f-b94c-2fd40caf17d9")
+			(uuid "94a8052b-6e87-4f3a-b18f-518f7d43e334")
 		)
 		(pin "2"
-			(uuid "47211964-cfdd-4da1-bb3a-80370e9e3d50")
+			(uuid "d70252ee-9c67-4c67-baf3-e2c1feb96bd7")
 		)
 		(instances
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "C7")
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -13332,76 +13747,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 392.43 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a75d29b1-8dcf-46c0-a87e-887c64448328")
-		(property "Reference" "C8"
-			(at 395.605 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 395.605 184.1499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 393.3952 186.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 392.43 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 392.43 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ef339504-28f8-4da8-be8f-349a715d8afa")
-		)
-		(pin "2"
-			(uuid "69b8ed57-a481-46ac-8b96-3efe101222f1")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "groove_pico:WS2812B_Unified")
 		(at 266.7 236.22 0)
 		(unit 1)
@@ -13473,6 +13818,142 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "agg:SWITCH_SPST")
+		(at 127 87.63 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a92ab70c-9edf-4ae3-98f1-97494c69aef9")
+		(property "Reference" "SW3"
+			(at 127.635 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SWITCH_SPST"
+			(at 128.27 88.8999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:EVQP1K05M"
+			(at 127 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25762d38-66c7-478b-bade-199de26f27b3")
+		)
+		(pin "2"
+			(uuid "84ba6620-e1d8-44d6-b87e-050d2155f8af")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 152.4 228.6 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aca5b811-b0e2-405d-b147-3281b0f78e9e")
+		(property "Reference" "#PWR020"
+			(at 152.4 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 152.4 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85b1154d-881e-4f82-8207-25e2ff5f8bd4")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -13619,84 +14100,6 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 140.97 200.66 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b2bbb77c-66a9-4ae6-9d38-36721bd11d3b")
-		(property "Reference" "R4"
-			(at 139.7 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10"
-			(at 144.78 201.295 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 140.97 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 140.97 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 140.97 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C23186"
-			(at 140.97 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d428e8b2-0beb-4bf0-a151-c9c0c6e10e62")
-		)
-		(pin "2"
-			(uuid "436af8d7-b601-4b1b-85cf-1d5ae2b2973a")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -13926,6 +14329,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 392.43 182.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6941e5e-6ed8-481e-8a5e-4a7ce7ad02d0")
+		(property "Reference" "C8"
+			(at 395.605 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 395.605 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 393.3952 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 392.43 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 392.43 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c36be12-1e6b-46e6-94a9-d2065a2dfc6f")
+		)
+		(pin "2"
+			(uuid "8254f0cb-00dd-44cb-acfc-53276cf5ce69")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 152.4 228.6 90)
 		(unit 1)
@@ -13953,7 +14426,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
+		(property "Footprint" "groove_pico:Solder_1P_S"
 			(at 152.4 223.52 0)
 			(effects
 				(font
@@ -14425,6 +14898,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 102.87 214.63 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c011e394-480d-4265-97dd-dc3adc099500")
+		(property "Reference" "#PWR017"
+			(at 102.87 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 102.87 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b2dfdda-2147-423a-9a33-23ffbd3a5627")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 152.4 198.12 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2b40aef-b594-431d-94c2-4018b264da6d")
+		(property "Reference" "#PWR016"
+			(at 152.4 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 152.4 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9abdded-3ec8-4e20-af4a-3ba8e2020dbf")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "groove_pico:WS2812B_Unified")
 		(at 292.1 236.22 0)
 		(unit 1)
@@ -14640,6 +15245,140 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 162.56 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d027fd95-1c8f-4d2d-9c4a-b77823adddf8")
+		(property "Reference" "J23"
+			(at 158.115 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW"
+			(at 160.528 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 162.56 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 162.56 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "037cfa9e-7ace-4300-a182-7dc4b45cec16")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 162.56 104.14 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d296eb3b-ce8c-4335-ac82-04e626739d75")
+		(property "Reference" "J24"
+			(at 157.988 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW"
+			(at 160.528 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b98f4fe-a53e-4c8e-81e4-232415938096")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "groove_pico:WS2812B_Unified")
 		(at 215.9 151.13 0)
 		(unit 1)
@@ -14711,6 +15450,73 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 102.87 218.44 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5632b03-96dc-42f6-ac87-3af576711560")
+		(property "Reference" "J26"
+			(at 107.95 218.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "V"
+			(at 104.902 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Solder_1P_S"
+			(at 102.87 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 102.87 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1c2662fb-18cf-4db3-b5ec-69199a113cbd")
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "J26")
 					(unit 1)
 				)
 			)
@@ -14932,84 +15738,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 134.62 231.14 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "db3106a5-ac27-4e21-a1ac-0734d9172226")
-		(property "Reference" "R5"
-			(at 133.35 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10"
-			(at 138.684 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 134.62 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 134.62 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 134.62 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C23186"
-			(at 134.62 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bffa5882-3db5-4b18-b40a-6f29f19f84d4")
-		)
-		(pin "2"
-			(uuid "033d869d-33bf-4555-8c3d-d6f102b9b200")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 152.4 243.84 90)
 		(unit 1)
@@ -15037,7 +15765,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
+		(property "Footprint" "groove_pico:Solder_1P_S"
 			(at 152.4 238.76 0)
 			(effects
 				(font
@@ -15148,72 +15876,6 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 152.4 198.12 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dc8dce6f-b497-4317-950b-d9ef3be95d86")
-		(property "Reference" "#PWR017"
-			(at 152.4 201.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 152.4 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 152.4 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 152.4 198.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff0ab1cb-6c3f-4551-a8e5-2de9f0c5ee19")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -15616,7 +16278,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "groove_pico:Solder_1P"
+		(property "Footprint" "groove_pico:Solder_1P_S"
 			(at 154.94 242.57 0)
 			(effects
 				(font
@@ -15734,7 +16396,7 @@
 	)
 	(symbol
 		(lib_id "agg:SWITCH_SPST")
-		(at 135.89 90.17 90)
+		(at 135.89 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15742,7 +16404,7 @@
 		(dnp no)
 		(uuid "eb6ebf76-9714-4997-8bf0-aaed92d5a3c6")
 		(property "Reference" "SW2"
-			(at 136.525 90.17 90)
+			(at 136.525 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15751,7 +16413,7 @@
 			)
 		)
 		(property "Value" "SWITCH_SPST"
-			(at 137.16 91.4399 90)
+			(at 137.16 88.8999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15761,7 +16423,7 @@
 			)
 		)
 		(property "Footprint" "groove_pico:EVQP1K05M"
-			(at 135.89 90.17 0)
+			(at 135.89 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15770,7 +16432,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 90.17 0)
+			(at 135.89 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15779,7 +16441,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 135.89 90.17 0)
+			(at 135.89 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16296,7 +16958,6 @@
 	(symbol
 		(lib_id "agg:SWITCH_SPST")
 		(at 182.88 247.65 0)
-		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16304,7 +16965,7 @@
 		(dnp no)
 		(uuid "fb6e14cf-f4a9-4a74-b37b-3553427fa857")
 		(property "Reference" "SW5"
-			(at 180.848 249.936 0)
+			(at 184.912 249.936 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16313,7 +16974,7 @@
 			)
 		)
 		(property "Value" "SWITCH_SPST"
-			(at 184.1499 248.92 90)
+			(at 181.6101 248.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)

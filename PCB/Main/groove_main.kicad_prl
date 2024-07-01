@@ -1,7 +1,7 @@
 {
   "board": {
-    "active_layer": 44,
-    "active_layer_preset": "All Layers",
+    "active_layer": 36,
+    "active_layer_preset": "可见层",
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
@@ -26,7 +26,7 @@
       "text": true,
       "tracks": true,
       "vias": true,
-      "zones": false
+      "zones": true
     },
     "visible_items": [
       0,
@@ -64,7 +64,7 @@
       35,
       36
     ],
-    "visible_layers": "fffffff_ffffffff",
+    "visible_layers": "0001030_ffffffff",
     "zone_display_mode": 0
   },
   "git": {

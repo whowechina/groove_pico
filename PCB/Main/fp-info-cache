@@ -1,4 +1,4 @@
-23712102320921405
+23713822201404377
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -96790,6 +96790,13 @@ Kailh Choc Keyswitch Switch CPG1350 V1 CPG1353 V2 Cutout 1.00u
 2
 groove_pico
 Solder_1P
+Mounting Hole 3.2mm, no annular, M3
+mounting hole 3.2mm no annular m3
+0
+1
+1
+groove_pico
+Solder_1P_S
 Mounting Hole 3.2mm, no annular, M3
 mounting hole 3.2mm no annular m3
 0
