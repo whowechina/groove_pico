@@ -4167,12 +4167,6 @@
 		(uuid "31e15d3c-238f-4e17-8e10-53553e1a4199")
 	)
 	(junction
-		(at 234.95 184.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3364d673-c306-457a-9320-5ad237063e80")
-	)
-	(junction
 		(at 165.1 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4201,6 +4195,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3bac89a6-cf41-40b8-bd14-e9ac66b9e555")
+	)
+	(junction
+		(at 146.05 205.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cf1d796-b80d-4c65-b48e-5e8399831f0b")
 	)
 	(junction
 		(at 165.1 213.36)
@@ -4455,6 +4455,12 @@
 		(uuid "7b7ee291-6590-4451-9b3d-6f755c7f5344")
 	)
 	(junction
+		(at 121.285 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7bca0261-bc0f-43c2-9c83-b94ddb42ac8b")
+	)
+	(junction
 		(at 375.92 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4569,6 +4575,12 @@
 		(uuid "9a7309bb-d686-4e26-a138-92b5d7af917a")
 	)
 	(junction
+		(at 133.985 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9bdb6128-f7c7-4250-ad17-6b273dfb1605")
+	)
+	(junction
 		(at 228.6 198.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4651,6 +4663,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c92af3a3-a185-46db-ba3c-fae6e5282da0")
+	)
+	(junction
+		(at 227.33 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce598fe6-f25d-4351-9970-124f9d6c936c")
 	)
 	(junction
 		(at 146.05 44.45)
@@ -4802,13 +4820,15 @@
 		(color 0 0 0 0)
 		(uuid "fe28243a-0b45-42b7-abca-369efee876e8")
 	)
+	(junction
+		(at 146.05 236.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff9d4e1b-701b-4340-a4a8-a80fe568a197")
+	)
 	(no_connect
 		(at 209.55 104.14)
 		(uuid "0d4f6ee4-93b4-4df7-87ba-3de1cc105eda")
-	)
-	(no_connect
-		(at 209.55 106.68)
-		(uuid "1ecfee82-1ce7-4c09-8f52-ca330c10d7eb")
 	)
 	(no_connect
 		(at 209.55 114.3)
@@ -4871,6 +4891,14 @@
 		(uuid "a001397e-f0ff-42b9-b05e-0a81237f71ed")
 	)
 	(no_connect
+		(at 173.99 106.68)
+		(uuid "a7b5b198-40aa-497d-b03c-0d404ffed34a")
+	)
+	(no_connect
+		(at 173.99 119.38)
+		(uuid "b22a0f4e-8fd8-44a3-be9d-8df851d03bc2")
+	)
+	(no_connect
 		(at 209.55 124.46)
 		(uuid "b4832efe-99f3-4ea2-8f18-2a711b3d4839")
 	)
@@ -4917,16 +4945,6 @@
 			(type default)
 		)
 		(uuid "00c592e3-39ce-48f0-8f20-d47ebe91a4df")
-	)
-	(wire
-		(pts
-			(xy 234.95 185.42) (xy 234.95 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "02302f2a-19bd-436e-bf1f-e3ca3e75adb0")
 	)
 	(wire
 		(pts
@@ -5010,16 +5028,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 184.15) (xy 236.855 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08e41c18-9872-496e-807b-88a40167ebd4")
-	)
-	(wire
-		(pts
 			(xy 286.385 121.92) (xy 302.26 121.92)
 		)
 		(stroke
@@ -5067,6 +5075,26 @@
 			(type default)
 		)
 		(uuid "0c084812-bec6-4afa-a003-13a018e5ee4d")
+	)
+	(wire
+		(pts
+			(xy 121.285 111.76) (xy 121.285 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c45bf1e-626d-4e6a-8ccd-eddee2a3ca72")
+	)
+	(wire
+		(pts
+			(xy 121.285 232.41) (xy 146.05 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ccc3da4-c5cb-49aa-aa5e-788d3f3e3af7")
 	)
 	(wire
 		(pts
@@ -5230,7 +5258,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 81.28) (xy 227.33 119.38)
+			(xy 227.33 81.28) (xy 227.33 106.68)
 		)
 		(stroke
 			(width 0)
@@ -5247,6 +5275,16 @@
 			(type default)
 		)
 		(uuid "1d52c754-e9ba-4c5d-88ab-16a7d26db078")
+	)
+	(wire
+		(pts
+			(xy 133.985 201.295) (xy 133.985 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1db5beb9-7661-478e-8780-20d7229a32c9")
 	)
 	(wire
 		(pts
@@ -5900,16 +5938,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.315 184.15) (xy 234.95 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "600f1e61-d08b-451a-b89a-1e28633eb727")
-	)
-	(wire
-		(pts
 			(xy 299.085 106.68) (xy 286.385 106.68)
 		)
 		(stroke
@@ -5990,7 +6018,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 111.76) (xy 135.89 111.76)
+			(xy 173.99 111.76) (xy 127.635 111.76)
 		)
 		(stroke
 			(width 0)
@@ -6057,6 +6085,16 @@
 			(type default)
 		)
 		(uuid "6c93951e-4b22-4588-9bfc-e699585e9433")
+	)
+	(wire
+		(pts
+			(xy 146.05 232.41) (xy 146.05 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ec5be6a-12ca-4652-ac9c-1d0fd3ca3f57")
 	)
 	(wire
 		(pts
@@ -6590,6 +6628,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 106.68) (xy 227.33 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98f6624b-b5f1-4617-b68a-5253fe0a6a5c")
+	)
+	(wire
+		(pts
 			(xy 323.85 93.98) (xy 323.85 104.14)
 		)
 		(stroke
@@ -6970,7 +7018,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 118.11) (xy 135.89 118.11)
+			(xy 132.08 118.11) (xy 133.985 118.11)
 		)
 		(stroke
 			(width 0)
@@ -7007,6 +7055,16 @@
 			(type default)
 		)
 		(uuid "bf27439c-a5d8-46c0-95ee-ac4a949d1e86")
+	)
+	(wire
+		(pts
+			(xy 146.05 201.295) (xy 133.985 201.295)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf544681-1632-4cd5-bbf5-0017a4aa544e")
 	)
 	(wire
 		(pts
@@ -7170,6 +7228,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 205.74) (xy 146.05 201.295)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf4dd4f-b947-4b99-9248-cf885c2f7279")
+	)
+	(wire
+		(pts
 			(xy 279.4 228.6) (xy 292.1 228.6)
 		)
 		(stroke
@@ -7250,7 +7318,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 111.76) (xy 129.54 111.76)
+			(xy 122.555 111.76) (xy 121.285 111.76)
 		)
 		(stroke
 			(width 0)
@@ -7460,6 +7528,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 106.68) (xy 227.33 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f481d75e-d9c2-4f0c-89c2-be0e6131eb89")
+	)
+	(wire
+		(pts
 			(xy 378.46 101.6) (xy 381 101.6)
 		)
 		(stroke
@@ -7600,6 +7678,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.985 118.11) (xy 135.89 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe2d4641-e8ad-473e-a983-e784ff307a5d")
+	)
+	(wire
+		(pts
 			(xy 132.08 36.83) (xy 146.05 36.83)
 		)
 		(stroke
@@ -7650,6 +7738,17 @@
 			(justify left bottom)
 		)
 		(uuid "52a9a2df-d88a-4ff5-b6c9-49f755595646")
+	)
+	(label "SW_L"
+		(at 154.94 217.17 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5711623d-306d-475d-8251-5f93638737be")
 	)
 	(label "LY"
 		(at 378.46 101.6 0)
@@ -7717,6 +7816,17 @@
 		)
 		(uuid "94b6edd9-d11c-4d5e-9ee0-dd5257615556")
 	)
+	(label "SW_R"
+		(at 162.56 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96b323d7-0936-4bea-a4f8-fe5a94dd5a68")
+	)
 	(label "LX"
 		(at 326.39 91.44 0)
 		(fields_autoplaced yes)
@@ -7738,6 +7848,28 @@
 			(justify left bottom)
 		)
 		(uuid "ae3afef5-acf0-4f3d-a018-d67dea8c5e69")
+	)
+	(label "SW_R"
+		(at 154.94 247.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d990a31d-840f-4f3e-9760-f7f1d12451b5")
+	)
+	(label "SW_L"
+		(at 162.56 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e22daaf8-a7d9-4da8-85fa-69cdfcfb5191")
 	)
 	(label "LY"
 		(at 353.06 101.6 0)
@@ -8100,6 +8232,79 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 45.085 250.825 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "067b6727-8746-4191-a536-085912352db0")
+		(property "Reference" "SCR14"
+			(at 50.165 250.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 45.085 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 45.085 259.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.085 250.825 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.085 250.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 45.085 250.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR14")
 					(unit 1)
 				)
 			)
@@ -9260,71 +9465,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 234.95 185.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2b396c48-2d8b-4025-a2ec-c27c55f9a54e")
-		(property "Reference" "#PWR018"
-			(at 234.95 191.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 235.077 189.8142 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 234.95 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 234.95 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3f0cb341-b8cf-4a44-8bf4-30f6eecb3844")
-		)
-		(instances
-			(project "groove_main"
-				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 386.08 111.76 0)
 		(mirror x)
@@ -9531,6 +9671,79 @@
 	)
 	(symbol
 		(lib_id "groove_pico:ScrewHole")
+		(at 26.035 250.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3435f780-c5c2-4673-984d-2cf4f57b7d2e")
+		(property "Reference" "SCR13"
+			(at 31.115 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 26.035 244.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 26.035 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 26.035 250.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 26.035 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 26.035 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
 		(at 29.21 196.85 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9626,7 +9839,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -9883,6 +10095,79 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 89.535 236.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3c327968-5c07-497a-bc40-216127fa53e0")
+		(property "Reference" "SCR12"
+			(at 94.615 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 89.535 230.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 89.535 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 89.535 236.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 89.535 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 89.535 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR12")
 					(unit 1)
 				)
 			)
@@ -10544,7 +10829,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 129.54 111.76 90)
+		(at 121.285 111.76 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10552,7 +10837,7 @@
 		(dnp no)
 		(uuid "48a7039c-ad59-4f49-93a9-699eba3078a3")
 		(property "Reference" "J21"
-			(at 128.778 114.3 90)
+			(at 120.523 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10561,7 +10846,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 127.508 109.22 0)
+			(at 119.253 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10571,7 +10856,7 @@
 			)
 		)
 		(property "Footprint" "groove_pico:Solder_1P_S"
-			(at 129.54 106.68 0)
+			(at 121.285 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10580,7 +10865,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 129.54 106.68 0)
+			(at 121.285 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10589,7 +10874,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 111.76 0)
+			(at 121.285 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12335,6 +12620,79 @@
 		)
 	)
 	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 70.485 235.585 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7602671f-2114-46ee-9e53-d1f3b4dda689")
+		(property "Reference" "SCR11"
+			(at 75.565 235.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 70.485 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 70.485 244.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 70.485 235.585 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 70.485 235.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 70.485 235.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 271.145 128.27 0)
 		(unit 1)
@@ -12785,7 +13143,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -12822,6 +13179,79 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 26.67 234.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "853c8812-f4ab-4725-833b-3341b0011a23")
+		(property "Reference" "SCR9"
+			(at 31.75 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 26.67 229.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 26.67 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 26.67 234.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 26.67 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 26.67 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR9")
 					(unit 1)
 				)
 			)
@@ -13184,7 +13614,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 133.35 111.76 90)
+		(at 125.095 111.76 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13192,7 +13622,7 @@
 		(dnp no)
 		(uuid "8f60d3e8-4f2c-4fd9-a810-dee1fd8b182b")
 		(property "Reference" "R5"
-			(at 134.62 109.474 90)
+			(at 126.365 109.474 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13201,7 +13631,7 @@
 			)
 		)
 		(property "Value" "10"
-			(at 134.62 114.046 90)
+			(at 126.365 114.046 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13210,7 +13640,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 133.35 111.76 0)
+			(at 125.095 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13219,7 +13649,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 133.35 111.76 0)
+			(at 125.095 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13228,7 +13658,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.35 111.76 0)
+			(at 125.095 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13237,7 +13667,7 @@
 			)
 		)
 		(property "LCSC" "C23186"
-			(at 133.35 111.76 0)
+			(at 125.095 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13587,6 +14017,79 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 45.72 235.585 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a20ffc1e-1315-45a6-8717-22782640691b")
+		(property "Reference" "SCR10"
+			(at 50.8 235.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 45.72 229.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 45.72 244.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 235.585 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 235.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 45.72 235.585 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR10")
 					(unit 1)
 				)
 			)
@@ -14892,6 +15395,79 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 90.17 250.825 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf2addaa-708a-4d55-ad72-6b053b8289dd")
+		(property "Reference" "SCR16"
+			(at 95.25 250.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 90.17 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 90.17 259.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 250.825 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 250.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 90.17 250.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR16")
 					(unit 1)
 				)
 			)
@@ -16389,6 +16965,79 @@
 			(project "groove_main"
 				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
 					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "groove_pico:ScrewHole")
+		(at 71.12 250.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eac0b36a-6fb2-4172-9ed7-0c524e6b11e7")
+		(property "Reference" "SCR15"
+			(at 76.2 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ScrewHole"
+			(at 71.12 244.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "groove_pico:Hole2.0"
+			(at 71.12 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 71.12 250.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 71.12 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 71.12 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "groove_main"
+				(path "/2e3f5573-c264-4a8b-a2f0-0e6473d39aad"
+					(reference "SCR15")
 					(unit 1)
 				)
 			)
