@@ -16,18 +16,8 @@
 #define SENSE_LIMIT_MAX 9
 #define SENSE_LIMIT_MIN -9
 
-static void disp_colors()
+static void disp_axis()
 {
-    printf("[Colors]\n");
-    printf("  Key on: %06lx, off: %06lx\n", 
-           groove_cfg->colors.key_on, groove_cfg->colors.key_off);
-}
-
-static void disp_style()
-{
-    printf("[Style]\n");
-    printf("  Key: %d, Level: %d\n",
-           groove_cfg->style.key, groove_cfg->style.level);
 }
 
 static void disp_hid()
@@ -38,28 +28,33 @@ static void disp_hid()
            groove_cfg->hid.nkro ? "on" : "off" );
 }
 
+static void disp_light()
+{
+
+}
+
 void handle_display(int argc, char *argv[])
 {
-    const char *usage = "Usage: display [colors|style|hid]\n";
+    const char *usage = "Usage: display [axis|light|hid]\n";
     if (argc > 1) {
         printf(usage);
         return;
     }
 
     if (argc == 0) {
-        disp_colors();
-        disp_style();
+        disp_axis();
+        disp_light();
         disp_hid();
         return;
     }
 
-    const char *choices[] = {"colors", "style", "hid"};
+    const char *choices[] = {"axis", "light", "hid"};
     switch (cli_match_prefix(choices, 3, argv[0])) {
         case 0:
-            disp_colors();
+            disp_axis();
             break;
         case 1:
-            disp_style();
+            disp_light();
             break;
         case 2:
             disp_hid();
@@ -101,9 +96,9 @@ static void handle_level(int argc, char *argv[])
         return;
     }
 
-    groove_cfg->style.level = level;
+    groove_cfg->light.level = level;
     config_changed();
-    disp_style();
+    disp_light();
 }
 
 static void handle_hid(int argc, char *argv[])

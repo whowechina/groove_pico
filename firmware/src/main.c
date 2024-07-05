@@ -28,7 +28,7 @@
 #include "cli.h"
 #include "commands.h"
 
-#include "rgb.h"
+#include "light.h"
 #include "button.h"
 
 
@@ -95,22 +95,7 @@ static uint64_t last_hid_time = 0;
 static void run_lights()
 {
     uint64_t now = time_us_64();
-    uint32_t button_colors[] = { 
-        rgb32(0x70, 0x08, 0x50, false),
-        rgb32(0x80, 0, 0, false),
-        rgb32(0, 0, 0x80, false),
-        rgb32(0, 0x80, 0, false),
-        rgb32(0x10, 0x10, 0x10, false)
-    };
-
-    uint16_t buttons = button_read();
-    for (int i = 0; i < 5; i++) {
-        bool pressed = buttons & (1 << i);
-        rgb_button_color(i, pressed ? button_colors[i] : 0x808080);
-    }
-
     if (now - last_hid_time >= 1000000) {
-
     }
 }
 
@@ -120,7 +105,7 @@ static void core1_loop()
     while (1) {
         if (mutex_try_enter(&core1_io_lock, NULL)) {
             run_lights();
-            rgb_update();
+            light_update();
             mutex_exit(&core1_io_lock);
         }
         cli_fps_count(1);
@@ -187,7 +172,7 @@ void init()
     mutex_init(&core1_io_lock);
     save_init(0xca44cafe, &core1_io_lock);
 
-    rgb_init();
+    light_init();
     button_init();
 
     cli_init("groove_pico>", "\n   << Groove Pico Controller >>\n"
@@ -229,19 +214,7 @@ void tud_hid_set_report_cb(uint8_t itf, uint8_t report_id,
                            uint16_t bufsize)
 {
     if (report_type == HID_REPORT_TYPE_OUTPUT) {
-        if (report_id == REPORT_ID_LED_SLIDER_16) {
-            rgb_set_brg(0, buffer, bufsize / 3);
-        } else if (report_id == REPORT_ID_LED_SLIDER_15) {
-            rgb_set_brg(16, buffer, bufsize / 3);
-        } else if (report_id == REPORT_ID_LED_TOWER_6) {
-            rgb_set_brg(31, buffer, bufsize / 3);
-        }
         last_hid_time = time_us_64();
         return;
     } 
-    
-    if (report_type == HID_REPORT_TYPE_FEATURE) {
-        last_hid_time = time_us_64();
-        return;
-    }
 }

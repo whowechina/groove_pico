@@ -5,7 +5,7 @@
 
 #if defined BOARD_GROOVE_PICO
 
-#define BASE_RGB_PIN 2 // 13
+#define BASE_RGB_PIN 13
 #define LEFT_RGB_PIN 12
 #define RIGHT_RGB_PIN 11
 

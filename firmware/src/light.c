@@ -1,10 +1,10 @@
 /*
- * RGB LED (WS2812) Strip control
+ * WS2812B Lights Control (Base + Left and Right Gimbals)
  * WHowe <github.com/whowechina>
  * 
  */
 
-#include "rgb.h"
+#include "light.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -22,9 +22,9 @@
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 
-static uint32_t rgb_buf[21]; // 4(Main buttons) + 1(Start button) + 16(Slider)
-
-static int8_t button_rgb[] = RGB_BUTTON_MAP;
+static uint32_t buf_base[19]; // 8 + 3 + 8
+static uint32_t buf_left[12];
+static uint32_t buf_right[12];
 
 #define _MAP_LED(x) _MAKE_MAPPER(x)
 #define _MAKE_MAPPER(x) MAP_LED_##x
@@ -85,6 +85,11 @@ uint32_t rgb32_from_hsv(uint8_t h, uint8_t s, uint8_t v)
     }
 }
 
+#define DRIVE_LED_PIO(pio, sm, buf) \
+    for (int i = 0; i < ARRAY_SIZE(buf); i++) { \
+        pio_sm_put_blocking(pio, sm, buf[i] << 8u); \
+    }
+
 static void drive_led()
 {
     static uint64_t last = 0;
@@ -94,20 +99,9 @@ static void drive_led()
     }
     last = now;
 
-    for (int i = 0; i < ARRAY_SIZE(rgb_buf); i++) {
-        pio_sm_put_blocking(pio0, 0, rgb_buf[i] << 8u);
-    }
-}
-
-void rgb_set_colors(const uint32_t *colors, unsigned index, size_t num)
-{
-    if (index >= ARRAY_SIZE(rgb_buf)) {
-        return;
-    }
-    if (index + num > ARRAY_SIZE(rgb_buf)) {
-        num = ARRAY_SIZE(rgb_buf) - index;
-    }
-    memcpy(&rgb_buf[index], colors, num * sizeof(*colors));
+    DRIVE_LED_PIO(pio0, 0, buf_base);
+    DRIVE_LED_PIO(pio0, 1, buf_left);
+    DRIVE_LED_PIO(pio0, 2, buf_right);
 }
 
 static inline uint32_t apply_level(uint32_t color)
@@ -116,45 +110,14 @@ static inline uint32_t apply_level(uint32_t color)
     unsigned g = (color >> 8) & 0xff;
     unsigned b = color & 0xff;
 
-    r = r * groove_cfg->style.level / 255;
-    g = g * groove_cfg->style.level / 255;
-    b = b * groove_cfg->style.level / 255;
+    r = r * groove_cfg->light.level / 255;
+    g = g * groove_cfg->light.level / 255;
+    b = b * groove_cfg->light.level / 255;
 
     return r << 16 | g << 8 | b;
 }
 
-void rgb_button_color(unsigned index, uint32_t color)
-{
-    if (index < ARRAY_SIZE(button_rgb)) {
-        rgb_buf[button_rgb[index]] = apply_level(color);
-    }
-}
-
-void rgb_slider_color(unsigned index, uint32_t color)
-{
-    if (index > 16) {
-        return;
-    }
-    rgb_buf[5 + index] = apply_level(color);
-}
-
-void rgb_set_brg(unsigned index, const uint8_t *brg_array, size_t num)
-{
-    if (index >= ARRAY_SIZE(rgb_buf)) {
-        return;
-    }
-    if (index + num > ARRAY_SIZE(rgb_buf)) {
-        num = ARRAY_SIZE(rgb_buf) - index;
-    }
-    for (int i = 0; i < num; i++) {
-        uint8_t b = brg_array[i * 3 + 0];
-        uint8_t r = brg_array[i * 3 + 1];
-        uint8_t g = brg_array[i * 3 + 2];
-        rgb_buf[index + i] = apply_level(rgb32(r, g, b, false));
-    }
-}
-
-void rgb_init()
+void light_init()
 {
     int offset = pio_add_program(pio0, &ws2812_program);
     gpio_set_drive_strength(BASE_RGB_PIN, GPIO_DRIVE_STRENGTH_2MA);
@@ -163,7 +126,38 @@ void rgb_init()
     ws2812_program_init(pio0, 2, offset, RIGHT_RGB_PIN, 800000, false);
 }
 
-void rgb_update()
+void light_update()
 {
     drive_led();
+}
+
+uint32_t * const gimbal_leds[2][2] = {
+    { buf_left, buf_base },
+    { buf_right, buf_base + 11 },
+};
+
+uint32_t * const indicator_leds = buf_base + 8;
+
+void light_set_left(int layer, int id, uint32_t color)
+{
+    if ((layer > 1) || (id > 7)) {
+        return;
+    }
+    gimbal_leds[0][layer][id] = apply_level(color);
+}
+
+void light_set_right(int layer, int id, uint32_t color)
+{
+    if ((layer > 1) || (id > 7)) {
+        return;
+    }
+    gimbal_leds[0][layer][id] = apply_level(color);
+}
+
+void light_set_center(int id, uint32_t color)
+{
+    if (id > 3) {
+        return;
+    }
+    indicator_leds[id] = apply_level(color);
 }
