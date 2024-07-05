@@ -12,13 +12,11 @@
 groove_cfg_t *groove_cfg;
 
 static groove_cfg_t default_cfg = {
-    .colors = {
-        .key_on = 0xff0000,
-        .key_off = 0x000000,
-    },
-    .style = {
-        .key = 0,
-        .level = 127,
+    .axis = {
+        { 2048, 0, 4095, 5, 0, 70, 1 },
+        { 2048, 0, 4095, 5, 0, 70, 1 },
+        { 2048, 0, 4095, 5, 0, 70, 1 },
+        { 2048, 0, 4095, 5, 0, 70, 1 },
     },
     .hid = {
         .joy = 1,
@@ -30,8 +28,8 @@ groove_runtime_t *groove_runtime;
 
 static void config_loaded()
 {
-    if (groove_cfg->style.level > 10) {
-        groove_cfg->style.level = default_cfg.style.level;
+    if (groove_cfg->light.level > 10) {
+        groove_cfg->light.level = default_cfg.light.level;
         config_changed();
     }
 }

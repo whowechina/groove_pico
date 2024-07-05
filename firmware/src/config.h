@@ -11,16 +11,18 @@
 
 typedef struct __attribute__((packed)) {
     struct {
-        uint32_t key_on;
-        uint32_t key_off;
-        uint32_t gap;
-    } colors;
+        uint16_t center;
+        uint16_t min;
+        uint16_t max;
+        uint8_t deadzone:7;
+        uint8_t invert:1;
+        uint8_t threshold:7;
+        uint8_t analog:1;
+    } axis[4];
     struct {
-        uint8_t key;
-        uint8_t gap;
-        uint8_t tof;
         uint8_t level;
-    } style;
+        uint8_t reserved[16];
+    } light;
     struct {
         uint8_t joy : 4;
         uint8_t nkro : 4;
