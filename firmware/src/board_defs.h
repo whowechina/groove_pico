@@ -11,8 +11,7 @@
 
 #define RGB_ORDER GRB // or RGB
 
-#define RGB_BUTTON_MAP { 2, 0, 1, 3, 4 }
-#define BUTTON_DEF { 11, 9, 10, 12, 13, 1, 0}
+#define BUTTON_DEF { 9, 8, 2, 1, 0 }
 
 #define AXIS_MUX_PIN_A 21
 #define AXIS_MUX_PIN_B 20

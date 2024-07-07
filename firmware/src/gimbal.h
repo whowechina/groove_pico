@@ -18,7 +18,7 @@ typedef enum {
     GIMBAL_RIGHT_Y,
 } gimbal_axis_t;
 
-uint16_t void gimbal_read(gimbal_axis_t axis);
-uint16_t void gimbal_raw(gimbal_axis_t axis);
+uint16_t gimbal_read(gimbal_axis_t axis);
+uint16_t gimbal_raw(gimbal_axis_t axis);
 
 #endif

@@ -20,8 +20,6 @@
 #include "board_defs.h"
 #include "config.h"
 
-#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
-
 static uint32_t buf_base[19]; // 8 + 3 + 8
 static uint32_t buf_left[12];
 static uint32_t buf_right[12];
@@ -86,7 +84,7 @@ uint32_t rgb32_from_hsv(uint8_t h, uint8_t s, uint8_t v)
 }
 
 #define DRIVE_LED_PIO(pio, sm, buf) \
-    for (int i = 0; i < ARRAY_SIZE(buf); i++) { \
+    for (int i = 0; i < count_of(buf); i++) { \
         pio_sm_put_blocking(pio, sm, buf[i] << 8u); \
     }
 
@@ -119,8 +117,7 @@ static inline uint32_t apply_level(uint32_t color)
 
 void light_init()
 {
-    int offset = pio_add_program(pio0, &ws2812_program);
-    gpio_set_drive_strength(BASE_RGB_PIN, GPIO_DRIVE_STRENGTH_2MA);
+    uint offset = pio_add_program(pio0, &ws2812_program);
     ws2812_program_init(pio0, 0, offset, BASE_RGB_PIN, 800000, false);
     ws2812_program_init(pio0, 1, offset, LEFT_RGB_PIN, 800000, false);
     ws2812_program_init(pio0, 2, offset, RIGHT_RGB_PIN, 800000, false);
@@ -131,12 +128,10 @@ void light_update()
     drive_led();
 }
 
-uint32_t * const gimbal_leds[2][2] = {
+static uint32_t * const gimbal_leds[2][2] = {
     { buf_left, buf_base },
     { buf_right, buf_base + 11 },
 };
-
-uint32_t * const indicator_leds = buf_base + 8;
 
 void light_set_left(int layer, int id, uint32_t color)
 {
@@ -151,13 +146,16 @@ void light_set_right(int layer, int id, uint32_t color)
     if ((layer > 1) || (id > 7)) {
         return;
     }
-    gimbal_leds[0][layer][id] = apply_level(color);
+    gimbal_leds[1][layer][id] = apply_level(color);
 }
 
-void light_set_center(int id, uint32_t color)
+void light_set_button(int id, uint32_t color)
 {
-    if (id > 3) {
-        return;
+    if (id < 4) {
+        buf_left[8 + id] = apply_level(color);
+    } else if (id < 8) {
+        buf_right[8 + id - 4] = apply_level(color);
+    } else if (id < 11) {
+        buf_base[8 + id - 8] = apply_level(color);
     }
-    indicator_leds[id] = apply_level(color);
 }

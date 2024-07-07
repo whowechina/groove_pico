@@ -30,13 +30,16 @@
 
 #include "light.h"
 #include "button.h"
-
+#include "gimbal.h"
 
 struct __attribute__((packed)) {
-    uint16_t buttons; // 16 buttons; see JoystickButtons_t for bit mapping
-    uint8_t  HAT;    // HAT switch; one nibble w/ unused nibble
-    uint32_t axis;  // slider touch data
-    uint8_t  VendorSpec;
+    uint16_t buttons;
+    uint8_t HAT;
+	uint8_t lx;
+	uint8_t ly;
+	uint8_t rx;
+	uint8_t ry;
+    uint8_t vendor;
 } hid_joy;
 
 struct __attribute__((packed)) {
@@ -48,7 +51,7 @@ void report_usb_hid()
 {
     if (tud_hid_ready()) {
         hid_joy.HAT = 0x08;
-        hid_joy.VendorSpec = 0;
+        hid_joy.vendor = 0;
         if (groove_cfg->hid.joy) {
             tud_hid_n_report(0x00, 0, &hid_joy, sizeof(hid_joy));
         }
@@ -60,18 +63,38 @@ void report_usb_hid()
     }
 }
 
+#define SWITCH_BIT_Y       (1U <<  0)
+#define SWITCH_BIT_B       (1U <<  1)
+#define SWITCH_BIT_A       (1U <<  2)
+#define SWITCH_BIT_X       (1U <<  3)
+#define SWITCH_BIT_L       (1U <<  4)
+#define SWITCH_BIT_R       (1U <<  5)
+#define SWITCH_BIT_ZL      (1U <<  6)
+#define SWITCH_BIT_ZR      (1U <<  7)
+#define SWITCH_BIT_MINUS   (1U <<  8)
+#define SWITCH_BIT_PLUS    (1U <<  9)
+#define SWITCH_BIT_L3      (1U << 10)
+#define SWITCH_BIT_R3      (1U << 11)
+#define SWITCH_BIT_HOME    (1U << 12)
+
 static void gen_joy_report()
 {
-    hid_joy.axis = 0;
-    for (int i = 0; i < 16; i++) {
-        hid_joy.axis |= 0x03 << (i * 2);
-    }
-    hid_joy.axis ^= 0x80808080;
-    uint16_t button = button_read();
-    hid_joy.buttons = (button & 0x0f) |
-                     ((button & 0x10) << 8) |
-                     ((button & 0x60) << 3);
+    hid_joy.lx = gimbal_read(GIMBAL_LEFT_X) >> 4;
+    hid_joy.ly = gimbal_read(GIMBAL_LEFT_Y) >> 4;
+    hid_joy.rx = gimbal_read(GIMBAL_RIGHT_X) >> 4;
+    hid_joy.ry = gimbal_read(GIMBAL_RIGHT_Y) >> 4;
 
+    uint16_t button = button_read();
+    hid_joy.buttons = 0;
+    hid_joy.buttons |= (button & 0x01) ? SWITCH_BIT_L : 0;
+    hid_joy.buttons |= (button & 0x02) ? SWITCH_BIT_R : 0;
+    if (button & 0x08) {
+        hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_MINUS : 0;
+        hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_PLUS : 0;
+    } else {
+        hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_A : 0;
+        hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_B : 0;
+    }
 }
 
 const uint8_t keycode_table[128][2] = { HID_ASCII_TO_KEYCODE };
@@ -96,6 +119,45 @@ static void run_lights()
 {
     uint64_t now = time_us_64();
     if (now - last_hid_time >= 1000000) {
+    }
+
+    for (int i = 0; i < 8; i++) {
+        light_set_button(i, rgb32_from_hsv(0, 128, 128));
+    }
+
+    for (int i = 0; i < 3; i++) {
+        light_set_button(8 + i, rgb32_from_hsv(0, 255, 128));
+    }
+
+    for (int i = 0; i < 8; i++) {
+        light_set_left(0, i, rgb32_from_hsv(80, 255, 255));
+        light_set_left(1, i, rgb32_from_hsv(80, 200, 255));
+
+        light_set_right(0, i, rgb32_from_hsv(180, 255, 255));
+        light_set_right(1, i, rgb32_from_hsv(180, 200, 255));
+    }
+
+    uint16_t button = button_read();
+    if (button & 0x01) {
+        light_set_button(0, rgb32_from_hsv(0, 0, 255));
+        light_set_button(1, rgb32_from_hsv(0, 0, 255));
+        light_set_button(2, rgb32_from_hsv(0, 0, 255));
+        light_set_button(3, rgb32_from_hsv(0, 0, 255));
+    }
+    if (button & 0x02) {
+        light_set_button(4, rgb32_from_hsv(0, 0, 255));
+        light_set_button(5, rgb32_from_hsv(0, 0, 255));
+        light_set_button(6, rgb32_from_hsv(0, 0, 255));
+        light_set_button(7, rgb32_from_hsv(0, 0, 255));
+    }
+    if (button & 0x04) {
+        light_set_button(8, rgb32_from_hsv(0, 0, 255));
+    }
+    if (button & 0x08) {
+        light_set_button(9, rgb32_from_hsv(0, 0, 255));
+    }
+    if (button & 0x10) {
+        light_set_button(10, rgb32_from_hsv(0, 0, 255));
     }
 }
 
@@ -128,6 +190,7 @@ static void core0_loop()
         gen_joy_report();
         gen_nkro_report();
         report_usb_hid();
+    
         sleep_us(600);
     }
 }
@@ -160,7 +223,6 @@ static void update_check()
 void init()
 {
     sleep_ms(50);
-    set_sys_clock_khz(150000, true);
     board_init();
 
     update_check();
@@ -174,6 +236,7 @@ void init()
 
     light_init();
     button_init();
+    gimbal_init();
 
     cli_init("groove_pico>", "\n   << Groove Pico Controller >>\n"
                             " https://github.com/whowechina\n\n");

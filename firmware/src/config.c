@@ -13,10 +13,14 @@ groove_cfg_t *groove_cfg;
 
 static groove_cfg_t default_cfg = {
     .axis = {
-        { 2048, 0, 4095, 5, 0, 70, 1 },
-        { 2048, 0, 4095, 5, 0, 70, 1 },
-        { 2048, 0, 4095, 5, 0, 70, 1 },
-        { 2048, 0, 4095, 5, 0, 70, 1 },
+        { 2048, 0, 4095, 127, 0, 70, 1 },
+        { 2048, 0, 4095, 127, 0, 70, 1 },
+        { 2048, 0, 4095, 127, 0, 70, 1 },
+        { 2048, 0, 4095, 127, 0, 70, 1 },
+    },
+    .light = {
+        .level = 128,
+        .reserved = {0},
     },
     .hid = {
         .joy = 1,
@@ -28,10 +32,6 @@ groove_runtime_t *groove_runtime;
 
 static void config_loaded()
 {
-    if (groove_cfg->light.level > 10) {
-        groove_cfg->light.level = default_cfg.light.level;
-        config_changed();
-    }
 }
 
 void config_changed()

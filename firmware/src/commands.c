@@ -30,7 +30,8 @@ static void disp_hid()
 
 static void disp_light()
 {
-
+    printf("[Light]\n");
+    printf("  Level: %d.\n", groove_cfg->light.level);
 }
 
 void handle_display(int argc, char *argv[])

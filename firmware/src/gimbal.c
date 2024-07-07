@@ -7,7 +7,11 @@
 #include "gimbal.h"
 
 #include <stdint.h>
+#include <stdio.h>
 #include <stdbool.h>
+
+#include "pico/stdio.h"
+#include "pico/stdlib.h"
 
 #include "hardware/gpio.h"
 #include "hardware/adc.h"
@@ -28,24 +32,7 @@ void gimbal_init()
     adc_select_input(ADC_CHANNEL);
 }
 
-typedef enum {
-    GIMBAL_LEFT_X = 0,
-    GIMBAL_LEFT_Y,
-    GIMBAL_RIGHT_X,
-    GIMBAL_RIGHT_Y,
-} gimbal_axis_t;
-
-static const struct {
-    bool a;
-    bool b;
-} axis_mux[4] = {
-    { false, false },
-    { false, true },
-    { true, false },
-    { true, true },
-};
-
-uint16_t void gimbal_read(gimbal_axis_t axis)
+uint16_t gimbal_read(gimbal_axis_t axis)
 {
     if (axis >= 4) {
         return 0;
@@ -75,6 +62,8 @@ uint16_t void gimbal_read(gimbal_axis_t axis)
         offset = 0;
     }
 
+    offset *= 2;
+
     if (groove_cfg->axis[axis].invert) {
         offset = -offset;
     }
@@ -82,7 +71,17 @@ uint16_t void gimbal_read(gimbal_axis_t axis)
     return offset + 2048;
 }
 
-uint16_t void gimbal_raw(gimbal_axis_t axis)
+static const struct {
+    bool a;
+    bool b;
+} axis_mux[4] = {
+    { false, false },
+    { true, false },
+    { true, true },
+    { false, true },
+};
+
+uint16_t gimbal_raw(gimbal_axis_t axis)
 {
     if (axis >= 4) {
         return 0;
