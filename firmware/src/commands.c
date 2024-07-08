@@ -11,6 +11,8 @@
 #include "save.h"
 #include "cli.h"
 
+#include "gimbal.h"
+
 #include "usb_descriptors.h"
 
 #define SENSE_LIMIT_MAX 9
@@ -34,9 +36,23 @@ static void disp_light()
     printf("  Level: %d.\n", groove_cfg->light.level);
 }
 
+static void disp_gimbal()
+{
+    printf("[Gimbal]\n");
+    const char *axis_names[] = {"LX", "LY", "RX", "RY"};
+    for (int i = 0; i < 4; i++) {
+        printf("  %s: %s, %s, deadzone %d, raw %d-%d-%d.\n",
+               axis_names[i],
+               groove_cfg->axis[i].invert ? "invert" : "normal",
+               groove_cfg->axis[i].analog ? "analog" : "digital",
+               groove_cfg->axis[i].deadzone,
+               groove_cfg->axis[i].min, groove_cfg->axis[i].center, groove_cfg->axis[i].max);
+    }
+}
+
 void handle_display(int argc, char *argv[])
 {
-    const char *usage = "Usage: display [axis|light|hid]\n";
+    const char *usage = "Usage: display [axis|light|hid|gimbal]\n";
     if (argc > 1) {
         printf(usage);
         return;
@@ -46,10 +62,11 @@ void handle_display(int argc, char *argv[])
         disp_axis();
         disp_light();
         disp_hid();
+        disp_gimbal();
         return;
     }
 
-    const char *choices[] = {"axis", "light", "hid"};
+    const char *choices[] = {"axis", "light", "hid", "gimbal"};
     switch (cli_match_prefix(choices, 3, argv[0])) {
         case 0:
             disp_axis();
@@ -59,6 +76,9 @@ void handle_display(int argc, char *argv[])
             break;
         case 2:
             disp_hid();
+            break;
+        case 3:
+            disp_gimbal();
             break;
         default:
             printf(usage);
@@ -123,6 +143,151 @@ static void handle_hid(int argc, char *argv[])
     disp_hid();
 }
 
+static void calibrate_center(size_t retry)
+{
+    printf("Calibrating center...\n");
+
+    uint32_t centers[4] = { 0 };
+    for (int i = 0; i < retry; i++) {
+        for (int axis = 0; axis < 4; axis++) {
+            centers[axis] += gimbal_raw(axis);
+        }
+        sleep_ms(7);
+    }
+    for (int axis = 0; axis < 4; axis++) {
+        groove_cfg->axis[axis].center = centers[axis] / retry;
+    }
+}
+
+static void calibrate_range(uint32_t seconds)
+{
+    uint32_t mins[4], maxs[4];
+    for (int axis = 0; axis < 4; axis++) {
+        mins[axis] = groove_cfg->axis[axis].center;
+        maxs[axis] = groove_cfg->axis[axis].center;
+    }
+
+    uint64_t start = time_us_64();
+
+    while (time_us_64() - start < seconds * 1000000) {
+        for (int axis = 0; axis < 4; axis++) {
+            uint16_t val = gimbal_raw(axis);
+            if (val < mins[axis]) {
+                mins[axis] -= (mins[axis] - val) / 2;
+            } else if (val > maxs[axis]) {
+                maxs[axis] += (val - maxs[axis]) / 2;
+            }
+        }
+        sleep_ms(7);
+    }
+}
+
+static void gimbal_calibrate()
+{
+    printf("Caliration Steps:\n"
+           "  1. Make sure the gimbals are at the center position.\n"
+           "  2. Enter this calibrate command.\n"
+           "  3. Rotate both gimbals to the full range of motion several times.\n"
+           "  4. Calibration finishes in 8 seconds.\n");
+
+    printf("Now calibrating centers ...");
+    fflush(stdout);
+
+    calibrate_center(10);
+    printf(" done.\n");
+
+    printf("Now calibrating range ...");
+    fflush(stdout);
+
+    calibrate_range(8);
+    printf(" done.\n");
+}
+
+static void gimbal_invert(int axis, const char *param)
+{
+    const char *usage = "Usage: gimbal <all|lx|ly|rx|ry> invert <on|off>\n";
+
+    int invert = cli_match_prefix((const char *[]){"off", "on"}, 2, param);
+    if (invert < 0) {
+        printf(usage);
+        return;
+    }
+
+    for (int i = 0; i < 4; i++) {
+        if ((i == axis) || (axis == 0)) {
+            groove_cfg->axis[i].invert = invert;
+        }
+    }
+}
+
+static void gimbal_deadzone(int axis, const char *param)
+{
+    const char *usage = "Usage: gimbal <all|lx|ly|rx|ry> deadzone <0..100>\n";
+    int deadzone = cli_extract_non_neg_int(param, 0);
+    if ((deadzone < 0) || (deadzone > 100)) {
+        printf(usage);
+        return;
+    }
+
+    for (int i = 0; i < 4; i++) {
+        if ((i == axis) || (axis == 0)) {
+            groove_cfg->axis[i].deadzone = deadzone;
+        }
+    }
+}
+
+static void gimbal_analog(int axis, const char *param)
+{
+    const char *usage = "Usage: gimbal <all|lx|ly|rx|ry> analog <on|off>\n";
+    int analog = cli_match_prefix((const char *[]){"off", "on"}, 2, param);
+    if (analog < 0) {
+        printf(usage);
+        return;
+    }
+
+    for (int i = 0; i < 4; i++) {
+        if ((i == axis) || (axis == 0)) {
+            groove_cfg->axis[i].analog = analog;
+        }
+    }
+}
+
+static void handle_gimbal(int argc, char *argv[])
+{
+    const char *usage = "Usage: gimbal calibrate\n"
+                        "       gimbal <all|lx|ly|rx|ry> invert <on|off>\n"
+                        "       gimbal <all|lx|ly|rx|ry> deadzone <0..100>\n"
+                        "       gimbal <all|lx|ly|rx|ry> analog <on|off>\n";
+    if (argc == 1) {
+        if (strncasecmp(argv[0], "calibrate", strlen(argv[0])) != 0) {
+            printf(usage);
+            return;
+        }
+        gimbal_calibrate();
+    } else if (argc == 3) {
+        int axis = cli_match_prefix((const char *[]){"all", "lx", "ly", "rx", "ry"}, 5, argv[0]);
+        if (axis < 0) {
+            printf(usage);
+            return;
+        }
+
+        int op = cli_match_prefix((const char *[]){"invert", "deadzone", "analog"}, 3, argv[1]);
+        if (op == 0) {
+            gimbal_invert(axis, argv[2]);
+        } else if (op == 1) {
+            gimbal_deadzone(axis, argv[2]);
+        } else if (op == 2) {
+            gimbal_analog(axis, argv[2]);
+        } else {
+            printf(usage);
+            return;
+        }
+    }
+
+    config_changed();
+    disp_gimbal();
+}
+
 static void handle_save()
 {
     save_request(true);
@@ -139,6 +304,7 @@ void commands_init()
     cli_register("display", handle_display, "Display all config.");
     cli_register("level", handle_level, "Set LED brightness level.");
     cli_register("hid", handle_hid, "Set HID mode.");
+    cli_register("gimbal", handle_gimbal, "Calibrate the gimbals.");
     cli_register("save", handle_save, "Save config to flash.");
     cli_register("factory", handle_factory_reset, "Reset everything to default.");
 }

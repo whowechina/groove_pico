@@ -51,18 +51,18 @@ uint16_t gimbal_read(gimbal_axis_t axis)
     }
 
     int offset = raw - center;
+    uint32_t lower_deadzone = deadzone * (center - min) / 2 / 100;
+    uint32_t upper_deadzone = deadzone * (max - center) / 2 / 100;
 
-    if (offset < -deadzone) {
-        offset += deadzone;
-        offset = offset * 2047 / (center - min - deadzone); 
-    } else if (offset > deadzone) {
-        offset -= deadzone;
-        offset = offset * 2047 / (max - center - deadzone);
+    if (offset < -lower_deadzone) {
+        offset += lower_deadzone;
+        offset = offset * 2047 / (center - min - lower_deadzone); 
+    } else if (offset > upper_deadzone) {
+        offset -= upper_deadzone;
+        offset = offset * 2047 / (max - center - upper_deadzone);
     } else {
         offset = 0;
     }
-
-    offset *= 2;
 
     if (groove_cfg->axis[axis].invert) {
         offset = -offset;
