@@ -1,7 +1,7 @@
 {
   "board": {
-    "active_layer": 0,
-    "active_layer_preset": "可见层",
+    "active_layer": 31,
+    "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
@@ -22,11 +22,11 @@
       "keepouts": false,
       "lockedItems": true,
       "otherItems": false,
-      "pads": false,
-      "text": true,
-      "tracks": true,
-      "vias": true,
-      "zones": true
+      "pads": true,
+      "text": false,
+      "tracks": false,
+      "vias": false,
+      "zones": false
     },
     "visible_items": [
       0,
@@ -64,7 +64,7 @@
       35,
       36
     ],
-    "visible_layers": "0001030_ffffffff",
+    "visible_layers": "0001130_ffffffff",
     "zone_display_mode": 0
   },
   "git": {
