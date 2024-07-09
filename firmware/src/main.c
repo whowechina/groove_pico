@@ -31,6 +31,7 @@
 #include "light.h"
 #include "button.h"
 #include "gimbal.h"
+#include "haptics.h"
 
 struct __attribute__((packed)) {
     uint16_t buttons;
@@ -92,8 +93,8 @@ static void gen_joy_report()
         hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_MINUS : 0;
         hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_PLUS : 0;
     } else {
-        hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_A : 0;
-        hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_B : 0;
+        hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_B : 0;
+        hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_A : 0;
     }
 }
 
@@ -122,19 +123,19 @@ static void run_lights()
     }
 
     for (int i = 0; i < 8; i++) {
-        light_set_button(i, rgb32_from_hsv(0, 128, 128));
+        light_set_button(i, rgb32_from_hsv(110, 128, 128));
     }
 
     for (int i = 0; i < 3; i++) {
-        light_set_button(8 + i, rgb32_from_hsv(0, 255, 128));
+        light_set_button(8 + i, rgb32_from_hsv(0, 255, 32));
     }
 
     for (int i = 0; i < 8; i++) {
         light_set_left(0, i, rgb32_from_hsv(80, 255, 255));
-        light_set_left(1, i, rgb32_from_hsv(80, 200, 255));
+        light_set_left(1, i, rgb32_from_hsv(80, 150, 255));
 
         light_set_right(0, i, rgb32_from_hsv(180, 255, 255));
-        light_set_right(1, i, rgb32_from_hsv(180, 200, 255));
+        light_set_right(1, i, rgb32_from_hsv(180, 150, 255));
     }
 
     uint16_t button = button_read();
@@ -143,13 +144,21 @@ static void run_lights()
         light_set_button(1, rgb32_from_hsv(0, 0, 255));
         light_set_button(2, rgb32_from_hsv(0, 0, 255));
         light_set_button(3, rgb32_from_hsv(0, 0, 255));
+        haptics_set(0, true);
+    } else {
+        haptics_set(0, false);
     }
+
     if (button & 0x02) {
         light_set_button(4, rgb32_from_hsv(0, 0, 255));
         light_set_button(5, rgb32_from_hsv(0, 0, 255));
         light_set_button(6, rgb32_from_hsv(0, 0, 255));
         light_set_button(7, rgb32_from_hsv(0, 0, 255));
+        haptics_set(1, true);
+    } else {
+        haptics_set(1, false);
     }
+
     if (button & 0x04) {
         light_set_button(8, rgb32_from_hsv(0, 0, 255));
     }
@@ -237,6 +246,7 @@ void init()
     light_init();
     button_init();
     gimbal_init();
+    haptics_init();
 
     cli_init("groove_pico>", "\n   << Groove Pico Controller >>\n"
                             " https://github.com/whowechina\n\n");

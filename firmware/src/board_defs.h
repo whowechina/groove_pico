@@ -12,6 +12,7 @@
 #define RGB_ORDER GRB // or RGB
 
 #define BUTTON_DEF { 9, 8, 2, 1, 0 }
+#define HAPTICS_DEF { 7, 6 }
 
 #define AXIS_MUX_PIN_A 21
 #define AXIS_MUX_PIN_B 20
