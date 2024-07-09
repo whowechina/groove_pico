@@ -51,12 +51,12 @@ uint16_t gimbal_read(gimbal_axis_t axis)
     }
 
     int offset = raw - center;
-    uint32_t lower_deadzone = deadzone * (center - min) / 2 / 100;
-    uint32_t upper_deadzone = deadzone * (max - center) / 2 / 100;
+    int lower_deadzone = deadzone * (center - min) / 2 / 100;
+    int upper_deadzone = deadzone * (max - center) / 2 / 100;
 
     if (offset < -lower_deadzone) {
         offset += lower_deadzone;
-        offset = offset * 2047 / (center - min - lower_deadzone); 
+        offset = offset * 2047 / (center - min - lower_deadzone);
     } else if (offset > upper_deadzone) {
         offset -= upper_deadzone;
         offset = offset * 2047 / (max - center - upper_deadzone);
@@ -90,12 +90,18 @@ uint16_t gimbal_raw(gimbal_axis_t axis)
     gpio_put(AXIS_MUX_PIN_A, axis_mux[axis].a);
     gpio_put(AXIS_MUX_PIN_B, axis_mux[axis].b);
 
-    const int sample_count = 4;
-    uint32_t sum = 0;
-    for (int i = 0; i < sample_count; i++) {
-        sleep_us(10);
-        sum += adc_read();
+    static uint16_t last_read[4] = { 2048, 2048, 2048, 2048 };
+    sleep_us(5);
+
+    const uint16_t rate_limit = 10;
+    uint16_t val = adc_read();
+    if (val > last_read[axis] + rate_limit) {
+        last_read[axis] += rate_limit;
+    } else if (val < last_read[axis] - rate_limit) {
+        last_read[axis] -= rate_limit;
+    } else {
+        last_read[axis] = val;
     }
 
-    return sum / sample_count;
+    return last_read[axis];
 }

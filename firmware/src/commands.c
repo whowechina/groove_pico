@@ -145,8 +145,6 @@ static void handle_hid(int argc, char *argv[])
 
 static void calibrate_center(size_t retry)
 {
-    printf("Calibrating center...\n");
-
     uint32_t centers[4] = { 0 };
     for (int i = 0; i < retry; i++) {
         for (int axis = 0; axis < 4; axis++) {
@@ -179,6 +177,13 @@ static void calibrate_range(uint32_t seconds)
             }
         }
         sleep_ms(7);
+    }
+
+    for (int axis = 0; axis < 4; axis++) {
+        mins[axis] += (groove_cfg->axis[axis].center - mins[axis]) / 16;
+        maxs[axis] -= (maxs[axis] - groove_cfg->axis[axis].center) / 16;
+        groove_cfg->axis[axis].min = mins[axis];
+        groove_cfg->axis[axis].max = maxs[axis];
     }
 }
 
@@ -213,8 +218,10 @@ static void gimbal_invert(int axis, const char *param)
         return;
     }
 
+    printf("ax:%d, param:%s, invert:%d\n", axis, param, invert);
+
     for (int i = 0; i < 4; i++) {
-        if ((i == axis) || (axis == 0)) {
+        if ((i == axis) || (axis == 4)) {
             groove_cfg->axis[i].invert = invert;
         }
     }
@@ -230,7 +237,7 @@ static void gimbal_deadzone(int axis, const char *param)
     }
 
     for (int i = 0; i < 4; i++) {
-        if ((i == axis) || (axis == 0)) {
+        if ((i == axis) || (axis == 4)) {
             groove_cfg->axis[i].deadzone = deadzone;
         }
     }
@@ -246,7 +253,7 @@ static void gimbal_analog(int axis, const char *param)
     }
 
     for (int i = 0; i < 4; i++) {
-        if ((i == axis) || (axis == 0)) {
+        if ((i == axis) || (axis == 4)) {
             groove_cfg->axis[i].analog = analog;
         }
     }
@@ -255,9 +262,9 @@ static void gimbal_analog(int axis, const char *param)
 static void handle_gimbal(int argc, char *argv[])
 {
     const char *usage = "Usage: gimbal calibrate\n"
-                        "       gimbal <all|lx|ly|rx|ry> invert <on|off>\n"
-                        "       gimbal <all|lx|ly|rx|ry> deadzone <0..100>\n"
-                        "       gimbal <all|lx|ly|rx|ry> analog <on|off>\n";
+                        "       gimbal invert <all|lx|ly|rx|ry> <on|off>\n"
+                        "       gimbal deadzone <all|lx|ly|rx|ry> <0..100>\n"
+                        "       gimbal analog <all|lx|ly|rx|ry> <on|off>\n";
     if (argc == 1) {
         if (strncasecmp(argv[0], "calibrate", strlen(argv[0])) != 0) {
             printf(usage);
@@ -265,13 +272,13 @@ static void handle_gimbal(int argc, char *argv[])
         }
         gimbal_calibrate();
     } else if (argc == 3) {
-        int axis = cli_match_prefix((const char *[]){"all", "lx", "ly", "rx", "ry"}, 5, argv[0]);
+        int axis = cli_match_prefix((const char *[]){"lx", "ly", "rx", "ry", "all"}, 5, argv[1]);
         if (axis < 0) {
             printf(usage);
             return;
         }
 
-        int op = cli_match_prefix((const char *[]){"invert", "deadzone", "analog"}, 3, argv[1]);
+        int op = cli_match_prefix((const char *[]){"invert", "deadzone", "analog"}, 3, argv[0]);
         if (op == 0) {
             gimbal_invert(axis, argv[2]);
         } else if (op == 1) {
