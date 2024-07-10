@@ -9,11 +9,11 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdbool.h>
 #include <memory.h>
 
 
-#include "bsp/board.h"
 #include "pico/bootrom.h"
 #include "pico/stdio.h"
 
@@ -28,7 +28,7 @@ static struct {
 } modules[8] = {0};
 static int module_num = 0;
 
-static uint32_t my_magic = 0xcafecafe;
+static uint32_t my_magic = 0xcafec00e;
 
 #define SAVE_TIMEOUT_US 5000000
 
