@@ -122,20 +122,13 @@ static void run_lights()
     if (now - last_hid_time >= 1000000) {
     }
 
-    for (int i = 0; i < 8; i++) {
-        light_set_button(i, rgb32_from_hsv(110, 128, 128));
-    }
-
-    for (int i = 0; i < 3; i++) {
-        light_set_button(8 + i, rgb32_from_hsv(0, 255, 32));
-    }
+    light_effect();
 
     for (int i = 0; i < 8; i++) {
-        light_set_left(0, i, rgb32_from_hsv(80, 255, 255));
-        light_set_left(1, i, rgb32_from_hsv(80, 150, 255));
-
-        light_set_right(0, i, rgb32_from_hsv(180, 255, 255));
-        light_set_right(1, i, rgb32_from_hsv(180, 150, 255));
+        light_set_boost_base(0, 0, rgb32_from_hsv(20, 0, 1));
+        light_set_boost_base(0, 1, rgb32_from_hsv(20, 0, 20));
+        light_set_boost_base(1, 0, rgb32_from_hsv(20, 0, 1));
+        light_set_boost_base(1, 1, rgb32_from_hsv(20, 0, 20));
     }
 
     uint16_t button = button_read();
@@ -144,6 +137,7 @@ static void run_lights()
         light_set_button(1, rgb32_from_hsv(0, 0, 255));
         light_set_button(2, rgb32_from_hsv(0, 0, 255));
         light_set_button(3, rgb32_from_hsv(0, 0, 255));
+        light_set_boost(0, rgb32_from_hsv(20, 255, 255));
         haptics_set(0, true);
     } else {
         haptics_set(0, false);
@@ -154,9 +148,14 @@ static void run_lights()
         light_set_button(5, rgb32_from_hsv(0, 0, 255));
         light_set_button(6, rgb32_from_hsv(0, 0, 255));
         light_set_button(7, rgb32_from_hsv(0, 0, 255));
+        light_set_boost(1, rgb32_from_hsv(147, 255, 255));
         haptics_set(1, true);
     } else {
         haptics_set(1, false);
+    }
+
+    for (int i = 8; i < 11; i++) {
+        light_set_button(i, rgb32_from_hsv(0, 0, 10));
     }
 
     if (button & 0x04) {

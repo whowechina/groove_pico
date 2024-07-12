@@ -166,9 +166,9 @@ uint8_t const* tud_descriptor_configuration_cb(uint8_t index) {
 // array of pointer to string descriptors
 const char *string_desc_arr[] = {
     (const char[]){0x09, 0x04},  // 0: is supported language is English (0x0409)
-    "WHowe"       ,              // 1: Manufacturer
+    "WHowe",                     // 1: Manufacturer
     "Groove Pico Controller",    // 2: Product
-    "123456",                    // 3: Serials, should use chip ID
+    "123456",                    // 3: Serial
     "Groove Pico Joystick",
     "Groove Pico LED",
     "Groove Pico NKRO",
