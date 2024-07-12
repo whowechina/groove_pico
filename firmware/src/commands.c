@@ -193,7 +193,7 @@ static void gimbal_calibrate()
            "  1. Make sure the gimbals are at the center position.\n"
            "  2. Enter this calibrate command.\n"
            "  3. Rotate both gimbals to the full range of motion several times.\n"
-           "  4. Calibration finishes in 8 seconds.\n");
+           "  4. Calibration finishes in 5 seconds.\n");
 
     printf("Now calibrating centers ...");
     fflush(stdout);
@@ -204,7 +204,7 @@ static void gimbal_calibrate()
     printf("Now calibrating range ...");
     fflush(stdout);
 
-    calibrate_range(8);
+    calibrate_range(5);
     printf(" done.\n");
 }
 
