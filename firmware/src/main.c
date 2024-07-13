@@ -144,22 +144,24 @@ static void run_lights()
 
     uint16_t button = button_read();
     if (button & 0x01) {
-        light_set_button(0, rgb32_from_hsv(0, 0, 255));
-        light_set_button(1, rgb32_from_hsv(0, 0, 255));
-        light_set_button(2, rgb32_from_hsv(0, 0, 255));
-        light_set_button(3, rgb32_from_hsv(0, 0, 255));
-        light_set_boost(0, rgb32_from_hsv(20, 255, 255));
+        uint32_t color = rgb32_from_hsv(20, 255, 255);
+        light_set_button(0, color);
+        light_set_button(1, color);
+        light_set_button(2, color);
+        light_set_button(3, color);
+        light_set_boost(0, color);
         haptics_set(0, true);
     } else {
         haptics_set(0, false);
     }
 
     if (button & 0x02) {
-        light_set_button(4, rgb32_from_hsv(0, 0, 255));
-        light_set_button(5, rgb32_from_hsv(0, 0, 255));
-        light_set_button(6, rgb32_from_hsv(0, 0, 255));
-        light_set_button(7, rgb32_from_hsv(0, 0, 255));
-        light_set_boost(1, rgb32_from_hsv(147, 255, 255));
+        uint32_t color = rgb32_from_hsv(147, 255, 255);
+        light_set_button(4, color);
+        light_set_button(5, color);
+        light_set_button(6, color);
+        light_set_button(7, color);
+        light_set_boost(1, color);
         haptics_set(1, true);
     } else {
         haptics_set(1, false);
