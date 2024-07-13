@@ -289,6 +289,9 @@ static void handle_gimbal(int argc, char *argv[])
             printf(usage);
             return;
         }
+    } else {
+        printf(usage);
+        return;
     }
 
     config_changed();

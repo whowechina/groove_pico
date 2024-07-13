@@ -163,20 +163,16 @@ static uint32_t * const gimbal_leds[2][2] = {
     { buf_right, buf_base + 11 },
 };
 
-static void mix_left(int layer, int id, uint32_t color)
+static void mix_boost(int gimbal, int layer, int id, uint32_t color)
 {
-    if ((layer > 1) || (id > 7)) {
-        return;
+    gimbal %= 2;
+    layer %= 2;
+    id %= 8;
+    if (layer == 0) {
+        id = (8 - id) % 8;
     }
-    gimbal_leds[0][layer][id] = rgb32_add(boost_base[0][layer], apply_level(color));  
-}
-
-static void mix_right(int layer, int id, uint32_t color)
-{
-    if ((layer > 1) || (id > 7)) {
-        return;
-    }
-    gimbal_leds[1][layer][id] = rgb32_add(boost_base[1][layer], apply_level(color));
+    uint32_t mixed = rgb32_add(boost_base[gimbal][layer], apply_level(color));  
+    gimbal_leds[gimbal][layer][id] = mixed;
 }
 
 static void effect_button()
@@ -220,10 +216,10 @@ static void effect_mix()
         uint32_t left_1 = rgb32_add(pipe_boost[0][PIPE_DEPTH - 1], pipe_steer[0][i][PIPE_DEPTH - 1]);
         uint32_t right_0 = rgb32_add(pipe_boost[1][0], pipe_steer[1][i][0]);
         uint32_t right_1 = rgb32_add(pipe_boost[1][PIPE_DEPTH - 1], pipe_steer[1][i][PIPE_DEPTH - 1]);
-        mix_left(0, i, left_0);
-        mix_left(1, i, left_1);
-        mix_right(0, i, right_0);
-        mix_right(1, i, right_1);
+        mix_boost(0, 0, i, left_0);
+        mix_boost(0, 1, i, left_1);
+        mix_boost(1, 0, i, right_0);
+        mix_boost(1, 1, i, right_1);
     }
 }
 
@@ -284,7 +280,7 @@ void light_set_steer(int id, int dir, uint32_t color)
 
     dir %= 8;
 
-    if (id < 3) {
-        buf_base[16 + id] = apply_level(color);
+    if (id < 2) {
+        pipe_steer[id][dir][0] = color;
     }
 }

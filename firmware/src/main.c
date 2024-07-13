@@ -124,6 +124,17 @@ static void run_lights()
 
     light_effect();
 
+    int dir0 = gimbal_get_dir(0);
+    int dir1 = gimbal_get_dir(1);
+
+    if (dir0 >= 0) {
+        light_set_steer(0, dir0, rgb32_from_hsv(80, 255, 255));
+    }
+
+    if (dir1 >= 0) {
+        light_set_steer(1, dir1, rgb32_from_hsv(80, 255, 255));
+    }
+
     for (int i = 0; i < 8; i++) {
         light_set_boost_base(0, 0, rgb32_from_hsv(20, 0, 1));
         light_set_boost_base(0, 1, rgb32_from_hsv(20, 0, 20));

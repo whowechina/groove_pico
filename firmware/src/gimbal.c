@@ -9,6 +9,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "pico/stdio.h"
 #include "pico/stdlib.h"
@@ -77,8 +78,8 @@ static const struct {
 } axis_mux[4] = {
     { false, false },
     { true, false },
-    { true, true },
     { false, true },
+    { true, true },
 };
 
 uint16_t gimbal_raw(gimbal_axis_t axis)
@@ -104,4 +105,24 @@ uint16_t gimbal_raw(gimbal_axis_t axis)
     }
 
     return last_read[axis];
+}
+
+int gimbal_get_dir(int gimbal)
+{
+    if (gimbal >= 2) {
+        return -1;
+    }
+
+    int x = gimbal_read(gimbal ? GIMBAL_RIGHT_X : GIMBAL_LEFT_X) - 2048;
+    int y = gimbal_read(gimbal ? GIMBAL_RIGHT_Y : GIMBAL_LEFT_Y) - 2048;
+
+    int radius2 = x * x + y * y;
+    if (radius2 < 2048 * 2048 * 3 / 4) {
+        return -1;
+    }
+
+    int angle = (atan2(y, x) + M_PI * 13 / 8) * 4 / M_PI;
+    int dir = angle % 8;
+
+    return dir;
 }

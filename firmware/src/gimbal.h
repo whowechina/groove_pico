@@ -21,4 +21,7 @@ typedef enum {
 uint16_t gimbal_read(gimbal_axis_t axis);
 uint16_t gimbal_raw(gimbal_axis_t axis);
 
+/* -1 for no angle, [0..7] for 8 gimbal directions */
+int gimbal_get_dir(int gimbal);
+
 #endif
