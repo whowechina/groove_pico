@@ -253,7 +253,7 @@ void init()
 
     config_init();
     mutex_init(&core1_io_lock);
-    save_init(0xca44cafe, &core1_io_lock);
+    save_init(0xca44caac, &core1_io_lock);
 
     light_init();
     button_init();
