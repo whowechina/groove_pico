@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "groove_pico")(type "KiCad")(uri "D:/Code/groove_pico/PCB/Lib/groove_pico.kicad_sym")(options "")(descr ""))
-)
