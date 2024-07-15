@@ -114,7 +114,7 @@ int gimbal_get_dir(int gimbal)
     }
 
     int x = gimbal_read(gimbal ? GIMBAL_RIGHT_X : GIMBAL_LEFT_X) - 2048;
-    int y = gimbal_read(gimbal ? GIMBAL_RIGHT_Y : GIMBAL_LEFT_Y) - 2048;
+    int y = 2048 - gimbal_read(gimbal ? GIMBAL_RIGHT_Y : GIMBAL_LEFT_Y);
 
     int radius2 = x * x + y * y;
     if (radius2 < 2048 * 2048 * 3 / 4) {
