@@ -131,22 +131,32 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * Steps
   * Solder 4 thin silicone wires to gimbal PCBs and twist them together like a braid. It would be easier if you have different colors. My mapping is red to V, black to G, blue to LED and yellow to SW.  
   <img src="doc/gimbal_wires.jpg" width="50%">
+
   * Install the main PCB onto the printed base, using M2 screws.
+
   * Attach 2 silicone wires for each motors to the main PCB, and twist them respectively.
+
   * Install the BETAFPV Nano Gimbals onto the printed base part using M2.5 screws. Connect the potentiometer connectors to the main PCB.  
   <img src="doc/gimbal_install.jpg" width="50%">
+
   * Install the printed bolt to the shaft for both gimbals. You need to turn the bolts until there's no screw thread and then push it to the bottom.  
   <img src="doc/gimbal_bolt1.jpg" width="40%"><img src="doc/gimbal_bolt2.jpg" width="43%">
+
   * Install the printed stick onto the shaft for both gimbals. You need to use a little force to push it in.  
   <img src="doc/gimbal_stick1.jpg" width="40%"><img src="doc/gimbal_stick2.jpg" width="43%">
+
   * Install the flat vibration motor and the gimbal PCB onto the stick and guide the wires through the hole. Finally, use the printed tightener and a hex nut to fix the stick.  
   <img src="doc/gimbal_stick3.jpg" width="40%"><img src="doc/gimbal_stick4.jpg" width="43%">
+
   * Fix the gimbal PCB to the stick using M2 screws, paying special attention to the direction.  
   <img src="doc/gimbal_stick5.jpg" width="80%">
+
   * Solder the wires for the gimbal PCBs and motors to the corresponding pads on the main PCB. Please reserve some extra wire length for the gimbal movement. Some duct tape can be used to fix the wires on the main PCB.
   <img src="doc/gimbal_stick6.jpg" width="45%"><img src="doc/gimbal_stick7.jpg" width="45%">
+
   * Now attach the printed top part to the bottom part with M2.5 screws. And apply anti-slip pads on the bottom side.  
   <img src="doc/bottom_screws.jpg" width="45%">
+
   * If everything works fine, push the printed button caps onto the Choc switches and done!  
   <img src="doc/assembly_done.jpg" width="50%">
 
