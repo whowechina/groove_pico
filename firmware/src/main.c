@@ -136,10 +136,10 @@ static void run_lights()
     }
 
     for (int i = 0; i < 8; i++) {
-        light_set_boost_base(0, 0, rgb32_from_hsv(20, 0, 1));
-        light_set_boost_base(0, 1, rgb32_from_hsv(20, 0, 20));
-        light_set_boost_base(1, 0, rgb32_from_hsv(20, 0, 1));
-        light_set_boost_base(1, 1, rgb32_from_hsv(20, 0, 20));
+        light_set_boost_base(0, 0, rgb32_from_hsv(20, 150, 10));
+        light_set_boost_base(0, 1, rgb32_from_hsv(20, 150, 30));
+        light_set_boost_base(1, 0, rgb32_from_hsv(147, 150, 10));
+        light_set_boost_base(1, 1, rgb32_from_hsv(147, 150, 30));
     }
 
     uint16_t button = button_read();
