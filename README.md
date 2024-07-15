@@ -69,6 +69,9 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * 2x 2N7002 N-Channel MOSFETs (Q1, Q2). Actually most SOT-23 package N-Channel MOSFET models will be fine.  
   https://www.nexperia.com/products/mosfets/small-signal-mosfets/2N7002.html
 
+* 4x SH 1.25mm 3-pin connectors, both through-hole and SMD types are acceptable.  
+  <img src="doc/sh125_3p.jpg" width="50%">
+
 * 8x 0603 0.1uF (0.1~1uF all fine) capacitors (C1 to C8), OPTIONAL but strongly recommended.
 
 * 2x 0603 5.1kohm resistors (R1, R2) for the USB.
@@ -90,9 +93,11 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * 2x 1027 or 1030 DC 3V flat vibration motors.  
   https://www.amazon.com/vibration-electronic-equipment-12000RPM-adhesive/dp/B08B34W24X
 
+* 2x M3 hex nuts.
+
 * This is how it looks after soldering. Please note that the two circular daughter PCBs are fully wired, so you can test them before cutting them off.  
-  <img src="doc/pcb_solder_1.png" width="60%">
-  <img src="doc/pcb_solder_2.png" width="60%">
+  <img src="doc/pcb_solder_1.png" width="90%">
+  <img src="doc/pcb_solder_2.png" width="90%">
 
 * Becareful of 3 pin holes (simplifed to 2 holes in latest version) on the top side. It's a common oversight to either forget to solder them or to leave air bubbles during the process. To avoid this, solder slowly from one side of the hole, using minimal solder wire and a generous amount of flux.    
   <img src="doc/usb_solder_txrx.jpg" width="60%">
@@ -123,6 +128,27 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
     <img src="doc/anti_slip_pads.jpg" width="40%">
   * 30AWG or 32AWG ultra-thin silicone (very soft) wires, better to have them in 4 colors.  
     https://www.amazon.com/StrivedayTM-Flexible-Silicone-electronic-electrics/dp/B01KQ2JNLI?th=1
+* Steps
+  * Solder 4 thin silicone wires to gimbal PCBs and twist them together like a braid. It would be easier if you have different colors. My mapping is red to V, black to G, blue to LED and yellow to SW.  
+  <img src="doc/gimbal_wires.jpg" width="50%">
+  * Install the main PCB onto the printed base, using M2 screws.
+  * Attach 2 silicone wires for each motors to the main PCB, and twist them respectively.
+  * Install the BETAFPV Nano Gimbals onto the printed base part using M2.5 screws. Connect the potentiometer connectors to the main PCB.  
+  <img src="doc/gimbal_install.jpg" width="50%">
+  * Install the printed bolt to the shaft for both gimbals. You need to turn the bolts until there's no screw thread and then push it to the bottom.  
+  <img src="doc/gimbal_bolt1.jpg" width="40%"><img src="doc/gimbal_bolt2.jpg" width="43%">
+  * Install the printed stick onto the shaft for both gimbals. You need to use a little force to push it in.  
+  <img src="doc/gimbal_stick1.jpg" width="40%"><img src="doc/gimbal_stick2.jpg" width="43%">
+  * Install the flat vibration motor and the gimbal PCB onto the stick and guide the wires through the hole. Finally, use the printed tightener and a hex nut to fix the stick.  
+  <img src="doc/gimbal_stick3.jpg" width="40%"><img src="doc/gimbal_stick4.jpg" width="43%">
+  * Fix the gimbal PCB to the stick using M2 screws, paying special attention to the direction.  
+  <img src="doc/gimbal_stick5.jpg" width="80%">
+  * Solder the wires for the gimbal PCBs and motors to the corresponding pads on the main PCB. Please reserve some extra wire length for the gimbal movement. Some duct tape can be used to fix the wires on the main PCB.
+  <img src="doc/gimbal_stick6.jpg" width="45%"><img src="doc/gimbal_stick7.jpg" width="45%">
+  * Now attach the printed top part to the bottom part with M2.5 screws. And apply anti-slip pads on the bottom side.  
+  <img src="doc/bottom_screws.jpg" width="45%">
+  * If everything works fine, push the printed button caps onto the Choc switches and done!  
+  <img src="doc/assembly_done.jpg" width="50%">
 
 ### Firmware
 * UF2 file is in `Production\Firmware` folder.
@@ -130,7 +156,7 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * If it's already running Groove Pico firmware, you can either use "update" in command line or hold down all 3 buttons while connecting to USB to enter update mode.
 * To access the command line, you can use this Web Serial Terminal to connect to the USB serial port of the Groove Pico. (Note: "?" is for help)  
   https://googlechromelabs.github.io/serial-terminal/
-* You need to calibrate the gimbals by "gimbal calibrate" command after you flash the firmware.
+* **NOTE:** You need to calibrate the gimbals by "gimbal calibrate" command after you flash the firmware.
 
 ## CAD Source File
 I'm using OnShape free subscription. It's powerful but it can't archive original designs to local, so I can only share the link here. STL/DXF/DWG files are exported from this online document.  
