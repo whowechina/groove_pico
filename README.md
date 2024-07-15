@@ -17,20 +17,23 @@ Special thanks to community developers that inspired me and helped me: CrazyRedM
 ## Notes
 You can check out my other cool projects.
 
-* Popn Pico: https://github.com/whowechina/popn_pico    
-  <img src="https://raw.githubusercontent.com/whowechina/popn_pico/main/doc/main.jpg" width="180px">
-* IIDX Pico: https://github.com/whowechina/iidx_pico  
-  <img src="https://raw.githubusercontent.com/whowechina/iidx_pico/main/doc/main.jpg" width="250px">
-* IIDX Teeny: https://github.com/whowechina/iidx_teeny  
-  <img src="https://raw.githubusercontent.com/whowechina/iidx_teeny/main/doc/main.jpg" width="250px">
-* Mai Pico: https://github.com/whowechina/mai_pico  
-  <img src="https://raw.githubusercontent.com/whowechina/mai_pico/main/doc/main.jpg" width="250px">
-* Chu Pico: https://github.com/whowechina/chu_pico  
-  <img src="https://raw.githubusercontent.com/whowechina/chu_pico/main/doc/main.jpg" width="250px">
-* Diva Pico: https://github.com/whowechina/diva_pico  
-  <img src="https://raw.githubusercontent.com/whowechina/diva_pico/main/doc/main.jpg" width="250px">
-* AIC Pico: https://github.com/whowechina/aic_pico  
-  <img src="https://raw.githubusercontent.com/whowechina/aic_pico/main/doc/main.gif" width="250px">
+<img src="https://github.com/whowechina/popn_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/iidx_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/iidx_teeny/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/chu_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/mai_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/diva_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/aic_pico/raw/main/doc/main.gif" height="100px">
+<img src="https://github.com/whowechina/groove_pico/raw/main/doc/main.gif" height="100px">
+
+* Popn Pico: https://github.com/whowechina/popn_pico
+* IIDX Pico: https://github.com/whowechina/iidx_pico
+* IIDX Teeny: https://github.com/whowechina/iidx_teeny
+* Chu Pico: https://github.com/whowechina/chu_pico
+* Mai Pico: https://github.com/whowechina/mai_pico
+* Diva Pico: https://github.com/whowechina/diva_pico
+* AIC Pico: https://github.com/whowechina/aic_pico
+* Groove Pico: https://github.com/whowechina/groove_pico
 
 This Groove Pico project:  
 * Heavily depends on 3D printing, you need a 3D printer.
