@@ -113,12 +113,12 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
   * Layer height: 0.2mm
   * Support: Yes, always.
 
-* Bottom Part: `Production\3D\groove_pico_bottom.stl`, semi-transparent filament.
-* Top Part: `Production\3D\groove_pico_top.stl`, semi-transparent filament.
-* Gimbal Stick: `Production\3D\groove_pico_stick.stl`, semi-transparent filament. If you have Bambu AMS system, print the upper (above 22mm) layers with black filament.
-* Gimbal Bolt: `Production\3D\groove_pico_bolt.stl`, white filament.
-* Gimbal Tightener: `Production\3D\groove_pico_tightener.stl`, white filament.
-* Button cap: `Production\3D\groove_pico_button.stl`, white filament, print up-side down so you get nice button surface and stem. If you have Bambu AMS system, use their special support material for the interface layer.
+* Bottom Part: `Production\3DPrint\groove_pico_bottom.stl`, semi-transparent filament.
+* Top Part: `Production\3DPrint\groove_pico_top.stl`, semi-transparent filament.
+* Gimbal Stick: `Production\3DPrint\groove_pico_stick.stl`, semi-transparent filament. If you have Bambu AMS system, print the upper (above 22mm) layers with black filament.
+* Gimbal Bolt: `Production\3DPrint\groove_pico_bolt.stl`, white filament.
+* Gimbal Tightener: `Production\3DPrint\groove_pico_tightener.stl`, white filament.
+* Button cap: `Production\3DPrint\groove_pico_button_cap.stl`, white filament, print up-side down so you get nice button surface and stem. If you have Bambu AMS system, use their special support material for the interface layer.
 
 ### Assembly
 * Other components needed
