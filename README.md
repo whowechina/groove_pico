@@ -98,6 +98,13 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * Gimbal Tightener: `Production\3DPrint\groove_pico_tightener.stl`, white filament.
 * Button cap: `Production\3DPrint\groove_pico_button_cap.stl`, white filament, print up-side down so you get nice button surface and stem. If you have Bambu AMS system, use their special support material for the interface layer.
 
+### Nano Gimbal Modification (Optional)
+* The BETAFPV Nano Gimbals are designed for RC transmitters, the original equipped springs are a little too light for Groove Pico. If you don't like the loose feel, you can change the springs by yourself.
+* I measured the original springs, they're **0.3\*3\*10mm** (0.3mm steel wire diameter, 3mm outter diameter, 10mm free length, the ones at the left). So if you want a heavier feel, you can use **0.3\*3\*8mm** (the ones in the middle), **0.35\*3\*10mm** (the ones at the right), or **0.4\*3\*10mm** (I dont have one) tension springs.  
+  <img src="doc/gimbal_springs.jpg" width="70%">
+* You may install a heavier spring on the X axis and a lighter one on the Y axis. This will result an even feel for both axes.
+* You need to unscrew all screws to replace both X and Y axis springs. The job looks difficult but after you do it once, you'll find it's not that hard.  
+
 ### Assembly
 * Other components needed
   * 20x **M2\*4mm regular screws** to fix main PCB and daughter PCBs.
