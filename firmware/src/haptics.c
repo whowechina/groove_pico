@@ -29,6 +29,11 @@ void haptics_init()
 
 void haptics_set(int id, bool on)
 {
+    if (!groove_cfg->haptics.enabled) {
+        gpio_put(haptics_gpio[id], false);
+        return;
+    }
+
     if (id >= 2) {
         return;
     }

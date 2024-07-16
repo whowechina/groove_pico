@@ -32,7 +32,7 @@ static void disp_hid()
 
 static inline int sprintf_hsv_rgb(char *buf, const rgb_hsv_t *color)
 {
-    return sprintf(buf, "%s(%d, %d, %d)", color->rgb_hsv ? "hsv" : "rgb",
+    return sprintf(buf, "%s(%d,%d,%d)", color->rgb_hsv ? "hsv" : "rgb",
               color->val[0], color->val[1], color->val[2]);
 }
 
@@ -69,6 +69,12 @@ static void disp_light()
     printf("    aux_off: %s\n", color_str(&groove_cfg->light.aux_off, false));
 }
 
+static void disp_haptics()
+{
+    printf("[Haptics]\n");
+    printf("  Enabled: %s.\n", groove_cfg->haptics.enabled ? "on" : "off");
+}
+
 static void disp_gimbal()
 {
     printf("[Gimbal]\n");
@@ -85,7 +91,7 @@ static void disp_gimbal()
 
 void handle_display(int argc, char *argv[])
 {
-    const char *usage = "Usage: display [axis|light|hid|gimbal]\n";
+    const char *usage = "Usage: display [axis|light|haptics|hid|gimbal]\n";
     if (argc > 1) {
         printf(usage);
         return;
@@ -94,13 +100,14 @@ void handle_display(int argc, char *argv[])
     if (argc == 0) {
         disp_axis();
         disp_light();
-        disp_hid();
         disp_gimbal();
+        disp_haptics();
+        disp_hid();
         return;
     }
 
-    const char *choices[] = {"axis", "light", "hid", "gimbal"};
-    switch (cli_match_prefix(choices, 3, argv[0])) {
+    const char *choices[] = {"axis", "light", "gimbal", "haptics", "hid"};
+    switch (cli_match_prefix(choices, count_of(choices), argv[0])) {
         case 0:
             disp_axis();
             break;
@@ -108,10 +115,13 @@ void handle_display(int argc, char *argv[])
             disp_light();
             break;
         case 2:
-            disp_hid();
+            disp_gimbal();
             break;
         case 3:
-            disp_gimbal();
+            disp_haptics();
+            break;
+        case 4:
+            disp_hid();
             break;
         default:
             printf(usage);
@@ -407,6 +417,25 @@ static void handle_color(int argc, char *argv[])
     disp_light();
 }
 
+static void handle_haptics(int argc, char *argv[])
+{
+    const char *usage = "Usage: haptics <on|off>\n";
+    if (argc != 1) {
+        printf(usage);
+        return;
+    }
+
+    int on_off = cli_match_prefix((const char *[]){"off", "on"}, 2, argv[0]);
+    if (on_off < 0) {
+        printf(usage);
+        return;
+    }
+
+    groove_cfg->haptics.enabled = on_off;
+    config_changed();
+    disp_haptics();
+}
+
 static void handle_save()
 {
     save_request(true);
@@ -425,6 +454,7 @@ void commands_init()
     cli_register("color", handle_color, "Set LED color.");
     cli_register("hid", handle_hid, "Set HID mode.");
     cli_register("gimbal", handle_gimbal, "Calibrate the gimbals.");
+    cli_register("haptics", handle_haptics, "Enable/disable haptics.");
     cli_register("save", handle_save, "Save config to flash.");
     cli_register("factory", handle_factory_reset, "Reset everything to default.");
 }
