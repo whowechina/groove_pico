@@ -160,8 +160,8 @@ void light_init()
 }
 
 static uint32_t * const gimbal_leds[2][2] = {
-    { buf_left, buf_base },
-    { buf_right, buf_base + 11 },
+    { buf_left, buf_right, },
+    { buf_base, buf_base + 11 },
 };
 
 static void mix_boost(int gimbal, int layer, int id, uint32_t color)
@@ -173,9 +173,9 @@ static void mix_boost(int gimbal, int layer, int id, uint32_t color)
         id = (8 - id) % 8;
     }
 
-    uint32_t base = load_color(&groove_cfg->light.base[gimbal][layer]);
+    uint32_t base = load_color(&groove_cfg->light.base[layer][gimbal]);
     uint32_t mixed = rgb32_add(base, apply_level(color));  
-    gimbal_leds[gimbal][layer][id] = mixed;
+    gimbal_leds[layer][gimbal][id] = mixed;
 }
 
 static bool boosting[2] = { false, false };

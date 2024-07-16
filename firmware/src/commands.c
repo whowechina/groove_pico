@@ -30,10 +30,43 @@ static void disp_hid()
            groove_cfg->hid.nkro ? "on" : "off" );
 }
 
+static inline int sprintf_hsv_rgb(char *buf, const rgb_hsv_t *color)
+{
+    return sprintf(buf, "%s(%d, %d, %d)", color->rgb_hsv ? "hsv" : "rgb",
+              color->val[0], color->val[1], color->val[2]);
+}
+
+static const char *color_str(const rgb_hsv_t *color, bool left_right)
+{
+    static char buf[64];
+    int count = 0;
+
+    if (left_right) {
+        count += sprintf(buf + count, "LEFT ");
+    }
+
+    count += sprintf_hsv_rgb(buf + count, color);
+    
+    if (left_right) {
+        count += sprintf(buf + count, ", RIGHT ");
+        count += sprintf_hsv_rgb(buf + count, color + 1);
+    }
+
+    return buf;
+}
+
 static void disp_light()
 {
     printf("[Light]\n");
     printf("  Level: %d.\n", groove_cfg->light.level);
+    printf("  Colors:\n");
+    printf("    base0: %s\n", color_str(groove_cfg->light.base[0], true));
+    printf("    base1: %s\n", color_str(groove_cfg->light.base[0], true));
+    printf("    button: %s\n", color_str(groove_cfg->light.button, true));
+    printf("    boost: %s\n", color_str(groove_cfg->light.boost, true));
+    printf("    steer: %s\n", color_str(groove_cfg->light.steer, true));
+    printf("    aux_on: %s\n", color_str(&groove_cfg->light.aux_on, false));
+    printf("    aux_off: %s\n", color_str(&groove_cfg->light.aux_off, false));
 }
 
 static void disp_gimbal()
@@ -298,6 +331,82 @@ static void handle_gimbal(int argc, char *argv[])
     disp_gimbal();
 }
 
+static bool extract_color(rgb_hsv_t *color, char *argv[4])
+{
+    int rgb_hsv = cli_match_prefix((const char *[]){"rgb", "hsv"}, 2, argv[0]);
+    if (rgb_hsv < 0) {
+        return false;
+    }
+    color->rgb_hsv = rgb_hsv;
+
+    for (int i = 0; i < 3; i++) {
+        int v = cli_extract_non_neg_int(argv[1 + i], 0);
+        if ((v < 0) || (v > 255)) {
+            return false;
+        }
+        color->val[i] = v;
+    }
+
+    return true;
+}
+
+static void handle_color(int argc, char *argv[])
+{
+    const char *usage = "Usage: color <name> [left|right] <rgb|hsv> <0..255> <0..255> <0..255>\n"
+                        "  name: base0 base1 button boost steer aux_on aux_off\n";
+    if ((argc != 5) && (argc != 6)) {
+        printf(usage);
+        return;
+    }
+
+    rgb_hsv_t *names[] = {
+        &groove_cfg->light.aux_on,
+        &groove_cfg->light.aux_off,
+        groove_cfg->light.base[0],
+        groove_cfg->light.base[1],
+        groove_cfg->light.button,
+        groove_cfg->light.boost,
+        groove_cfg->light.steer,
+    };
+    const char *choices[] = {"aux_on", "aux_off", "base0", "base1", "button", "boost", "steer"};
+    static_assert(count_of(choices) == count_of(names));
+
+    int name = cli_match_prefix(choices, count_of(choices), argv[0]);
+    if (name < 0) {
+        printf(usage);
+        return;
+    }
+
+    bool left = true;
+    bool right = true;
+    if (argc == 6) {
+        int left_right = cli_match_prefix((const char *[]){"left", "right"}, 2, argv[1]);
+        if (left_right < 0) {
+            printf(usage);
+            return;
+        }
+        left = (left_right == 0);
+        right = (left_right == 1);
+    }
+
+    rgb_hsv_t color;
+    if (!extract_color(&color, argv + argc - 4)) {
+        printf(usage);
+        return;
+    }
+
+    rgb_hsv_t *target = names[name];
+    if (left) {
+        target[0] = color;
+    }
+    if ((name >= 2) && right) {
+        target[1] = color;
+    }
+
+    config_changed();
+    disp_light();
+}
+
 static void handle_save()
 {
     save_request(true);
@@ -313,6 +422,7 @@ void commands_init()
 {
     cli_register("display", handle_display, "Display all config.");
     cli_register("level", handle_level, "Set LED brightness level.");
+    cli_register("color", handle_color, "Set LED color.");
     cli_register("hid", handle_hid, "Set HID mode.");
     cli_register("gimbal", handle_gimbal, "Calibrate the gimbals.");
     cli_register("save", handle_save, "Save config to flash.");
