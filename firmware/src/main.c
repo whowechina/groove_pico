@@ -118,68 +118,27 @@ static uint64_t last_hid_time = 0;
 
 static void run_lights()
 {
-    uint64_t now = time_us_64();
-    if (now - last_hid_time >= 1000000) {
-    }
-
-    light_effect();
-
-    int dir0 = gimbal_get_dir(0);
-    int dir1 = gimbal_get_dir(1);
-
-    if (dir0 >= 0) {
-        light_set_steer(0, dir0, rgb32_from_hsv(80, 255, 255));
-    }
-
-    if (dir1 >= 0) {
-        light_set_steer(1, dir1, rgb32_from_hsv(80, 255, 255));
-    }
-
-    for (int i = 0; i < 8; i++) {
-        light_set_boost_base(0, 0, rgb32_from_hsv(20, 150, 10));
-        light_set_boost_base(0, 1, rgb32_from_hsv(20, 150, 30));
-        light_set_boost_base(1, 0, rgb32_from_hsv(147, 150, 10));
-        light_set_boost_base(1, 1, rgb32_from_hsv(147, 150, 30));
-    }
-
     uint16_t button = button_read();
     if (button & 0x01) {
-        uint32_t color = rgb32_from_hsv(20, 255, 255);
-        light_set_button(0, color);
-        light_set_button(1, color);
-        light_set_button(2, color);
-        light_set_button(3, color);
-        light_set_boost(0, color);
-        haptics_set(0, true);
-    } else {
-        haptics_set(0, false);
+        light_boost_left();
     }
-
     if (button & 0x02) {
-        uint32_t color = rgb32_from_hsv(147, 255, 255);
-        light_set_button(4, color);
-        light_set_button(5, color);
-        light_set_button(6, color);
-        light_set_button(7, color);
-        light_set_boost(1, color);
-        haptics_set(1, true);
-    } else {
-        haptics_set(1, false);
+        light_boost_right();
     }
 
-    for (int i = 8; i < 11; i++) {
-        light_set_button(i, rgb32_from_hsv(0, 0, 10));
-    }
+    light_set_aux(0, button & 0x04);
+    light_set_aux(1, button & 0x08);
+    light_set_aux(2, button & 0x10);
 
-    if (button & 0x04) {
-        light_set_button(8, rgb32_from_hsv(0, 0, 255));
-    }
-    if (button & 0x08) {
-        light_set_button(9, rgb32_from_hsv(0, 0, 255));
-    }
-    if (button & 0x10) {
-        light_set_button(10, rgb32_from_hsv(0, 0, 255));
-    }
+    light_steer_left(gimbal_get_dir(0));
+    light_steer_right(gimbal_get_dir(1));
+}
+
+static void run_haptics()
+{
+    uint16_t button = button_read();
+    haptics_set(0, button & 0x01);
+    haptics_set(1, button & 0x02);
 }
 
 static mutex_t core1_io_lock;
@@ -188,6 +147,7 @@ static void core1_loop()
     while (1) {
         if (mutex_try_enter(&core1_io_lock, NULL)) {
             run_lights();
+            run_haptics();
             light_update();
             mutex_exit(&core1_io_lock);
         }

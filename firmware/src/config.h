@@ -9,6 +9,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+typedef struct {
+    uint8_t rgb_hsv; // 0: RGB, 1: HSV
+    uint8_t val[3]; // RGB or HSV
+} rgb_hsv_t;
+
 typedef struct __attribute__((packed)) {
     struct {
         uint16_t center;
@@ -20,9 +25,19 @@ typedef struct __attribute__((packed)) {
         uint8_t analog:1;
     } axis[4];
     struct {
+        rgb_hsv_t base[2][2];
+        rgb_hsv_t button[2];
+        rgb_hsv_t boost[2];
+        rgb_hsv_t steer[2];
+        rgb_hsv_t aux_on;
+        rgb_hsv_t aux_off;
         uint8_t level;
-        uint8_t reserved[16];
+        uint8_t reserved[15];
     } light;
+    struct {
+        bool enabled;
+        uint8_t reserved[3];
+    } haptics;
     struct {
         uint8_t joy : 4;
         uint8_t nkro : 4;

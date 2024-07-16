@@ -25,7 +25,6 @@ static uint32_t buf_left[12];
 static uint32_t buf_right[12];
 
 #define PIPE_DEPTH 24
-static uint32_t boost_base[2][2];
 static uint32_t pipe_boost[2][PIPE_DEPTH];
 static uint32_t pipe_steer[2][8][PIPE_DEPTH];
 
@@ -44,8 +43,8 @@ static inline uint32_t _rgb32(uint32_t c1, uint32_t c2, uint32_t c3, bool gamma_
         c2 = ((c2 + 1) * (c2 + 1) - 1) >> 8;
         c3 = ((c3 + 1) * (c3 + 1) - 1) >> 8;
     }
-    
-    return (c1 << 16) | (c2 << 8) | (c3 << 0);    
+
+    return (c1 << 16) | (c2 << 8) | (c3 << 0);
 }
 
 uint32_t rgb32(uint32_t r, uint32_t g, uint32_t b, bool gamma_fix)
@@ -111,11 +110,20 @@ static uint32_t rgb32_add(uint32_t c1, uint32_t c2)
     uint8_t g2 = (c2 >> 8) & 0xff;
     uint8_t b2 = c2 & 0xff;
 
-    uint8_t r = r1 | r2;
-    uint8_t g = g1 | g2;
-    uint8_t b = b1 | b2;
+    uint8_t r = (r1 + r2 > 255) ? 255 : r1 + r2;
+    uint8_t g = (g1 + g2 > 255) ? 255 : g1 + g2;
+    uint8_t b = (b1 + b2 > 255) ? 255 : b1 + b2;
 
     return r << 16 | g << 8 | b;
+}
+
+uint32_t load_color(const rgb_hsv_t *color)
+{
+    if (color->rgb_hsv == 0) {
+        return rgb32(color->val[0], color->val[1], color->val[2], false);
+    } else {
+        return rgb32_from_hsv(color->val[0], color->val[1], color->val[2]);
+    }
 }
 
 #define DRIVE_LED_PIO(pio, sm, buf) \
@@ -125,13 +133,6 @@ static uint32_t rgb32_add(uint32_t c1, uint32_t c2)
 
 static void drive_led()
 {
-    static uint64_t last = 0;
-    uint64_t now = time_us_64();
-    if (now - last < 5000) { // 250Hz
-        return;
-    }
-    last = now;
-
     DRIVE_LED_PIO(pio0, 0, buf_base);
     DRIVE_LED_PIO(pio0, 1, buf_left);
     DRIVE_LED_PIO(pio0, 2, buf_right);
@@ -171,17 +172,36 @@ static void mix_boost(int gimbal, int layer, int id, uint32_t color)
     if (layer == 0) {
         id = (8 - id) % 8;
     }
-    uint32_t mixed = rgb32_add(boost_base[gimbal][layer], apply_level(color));  
+
+    uint32_t base = load_color(&groove_cfg->light.base[gimbal][layer]);
+    uint32_t mixed = rgb32_add(base, apply_level(color));  
     gimbal_leds[gimbal][layer][id] = mixed;
 }
+
+static bool boosting[2] = { false, false };
+static int steering[2] = { -1, -1 };
 
 static void effect_button()
 {
     int phase = (time_us_32() / 50000) % 4;
     for (int i = 0; i < 4; i++) {
-        uint32_t color = (phase == i) ? 0x808080 : 0x00;
-        light_set_button(i, color);
-        light_set_button(7 - i, color);
+        uint32_t left = 0;
+        uint32_t right = 0;
+
+        if (boosting[0]) {
+            left = load_color(&groove_cfg->light.boost[0]);
+        } else if (i == phase) {
+            left = load_color(&groove_cfg->light.button[0]);
+        }
+
+        if (boosting[1]) {
+            right = load_color(&groove_cfg->light.boost[1]);
+        } else if (i == phase) {
+            right = load_color(&groove_cfg->light.button[1]);
+        }
+
+        buf_left[8 + i] = left;
+        buf_right[11 - i] = right;
     }
 }
 
@@ -197,6 +217,9 @@ static void effect_boost()
 {
     for (int id = 0; id < 2; id++) {
         run_pipe(pipe_boost[id]);
+        if (boosting[id]) {
+            pipe_boost[id][0] = load_color(&groove_cfg->light.boost[id]);
+        }
     }
 }
 
@@ -205,6 +228,10 @@ static void effect_steer()
     for (int id = 0; id < 2; id++) {
         for (int dir = 0; dir < 8; dir++) {
             run_pipe(pipe_steer[id][dir]);
+        }
+        int dir = steering[id];
+        if (dir >= 0) {
+            pipe_steer[id][dir][0] = load_color(&groove_cfg->light.steer[id]);
         }
     }
 }
@@ -223,64 +250,67 @@ static void effect_mix()
     }
 }
 
-void light_effect()
+static void effect_finish()
+{
+    boosting[0] = false;
+    boosting[1] = false;
+    steering[0] = -1;
+    steering[1] = -1;
+}
+
+static void light_effect()
 {
     effect_button();
+    effect_boost();
+    effect_steer();
+    effect_mix();
+    effect_finish();
+}
 
-    static uint64_t last = 0;
-    uint64_t now = time_us_64();
-    if (now - last > 5000) { // 200Hz
-        effect_boost();
-        effect_steer();
-        last = now;
+void light_set_aux(int id, bool active)
+{
+    if (id >= 3) {
+        return;
     }
 
-    effect_mix();
+    rgb_hsv_t color = active ? groove_cfg->light.aux_on : groove_cfg->light.aux_off;
+    buf_base[8 + id] = load_color(&color);
+}
+
+void light_boost_left()
+{
+    boosting[0] = true;
+}
+
+void light_boost_right()
+{
+    boosting[1] = true;
+}
+
+void light_steer_left(int dir)
+{
+    if (dir >= 0) {
+        steering[0] = dir % 8;
+    }
+}
+
+void light_steer_right(int dir)
+{
+    if (dir >= 0) {
+        steering[1] = dir % 8;
+    }
 }
 
 void light_update()
 {
+    static uint64_t last = 0;
+    uint64_t now = time_us_64();
+    if (now - last < 5000) { // 200Hz
+        return;
+    }
+
+    last = now;
+
+    light_effect();
     drive_led();
-}
-
-void light_set_button(int id, uint32_t color)
-{
-    if (id < 4) {
-        buf_left[8 + id] = apply_level(color);
-    } else if (id < 8) {
-        buf_right[8 + id - 4] = apply_level(color);
-    } else if (id < 11) {
-        buf_base[8 + id - 8] = apply_level(color);
-    }
-}
-
-void light_set_boost_base(int id, int layer, uint32_t color)
-{
-    if (id >= 2) {
-        return;
-    }
-
-    boost_base[id][layer] = color;
-}
-
-void light_set_boost(int id, uint32_t color)
-{
-    if (id >= 2) {
-        return;
-    }
-
-    pipe_boost[id][0] = color;
-}
-
-void light_set_steer(int id, int dir, uint32_t color)
-{
-    if (id >= 2) {
-        return;
-    }
-
-    dir %= 8;
-
-    if (id < 2) {
-        pipe_steer[id][dir][0] = color;
-    }
 }

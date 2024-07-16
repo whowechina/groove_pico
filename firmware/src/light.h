@@ -13,16 +13,16 @@
 #include "config.h"
 
 void light_init();
-void light_effect();
 void light_update();
 
 uint32_t rgb32(uint32_t r, uint32_t g, uint32_t b, bool gamma_fix);
 uint32_t rgb32_from_hsv(uint8_t h, uint8_t s, uint8_t v);
+uint32_t load_color(const rgb_hsv_t *color);
 
-void light_set_button(int id, uint32_t color);
-
-void light_set_boost_base(int id, int layer, uint32_t color);
-void light_set_boost(int id, uint32_t color);
-void light_set_steer(int id, int dir, uint32_t color);
+void light_set_aux(int id, bool active);
+void light_boost_left();
+void light_boost_right();
+void light_steer_left(int dir);
+void light_steer_right(int dir);
 
 #endif
