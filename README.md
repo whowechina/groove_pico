@@ -100,10 +100,11 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 
 ### Nano Gimbal Modification (Optional)
 * The BETAFPV Nano Gimbals are designed for RC transmitters, the original equipped springs are a little too light for Groove Pico. If you don't like the loose feel, you can change the springs by yourself.
-* I measured the original springs, they're **0.3\*3\*10mm** (0.3mm steel wire diameter, 3mm outter diameter, 10mm free length, the ones at the left). So if you want a heavier feel, you can use **0.3\*3\*8mm** (the ones in the middle), **0.35\*3\*10mm** (the ones at the right), or **0.4\*3\*10mm** (I dont have one) tension springs.  
+* I measured the original springs, they're **0.3\*3\*10mm** (means 0.3mm steel wire diameter, 3mm outter diameter, 10mm free length, the first pair from the left). So if you want a heavier feel, you can use **0.35\*3\*10mm** (the second pair from the left), **0.4\*3\*10mm** (the third pair from the left), or even **0.3\*3\*8mm** (the last pair) tension springs.  
   <img src="doc/gimbal_springs.jpg" width="70%">
-* You may install a heavier spring on the X axis and a lighter one on the Y axis. This will result an even feel for both axes.
-* You need to unscrew all screws to replace both X and Y axis springs. The job looks difficult but after you do it once, you'll find it's not that hard.  
+* You need to unscrew all screws to replace both X and Y axis springs. The job looks difficult but after you do it once, you'll find it's not that hard.
+* You may feel the gimbal a little too bouncy, especially the X axis. You can apply some damping grease to the movement surface to reduce the bounce (put more on X-axis movement surface). I found Type-T03 is a good choice.  
+  <img src="doc/damper_grease_1.jpg" width="45%"> <img src="doc/damper_grease_2.jpg" width="40%">
 
 ### Assembly
 * Other components needed
