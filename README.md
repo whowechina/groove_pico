@@ -57,7 +57,7 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * 19x WS2812B-3528 RGB LEDs for the main PCB (D1-D19).
 * 1x 74HC4052PW, TSSOP16 package (U2).  
   https://www.lcsc.com/product-detail/Multiplexer-Demultiplexer_Nexperia-74HC4052PW_50063.html
-* 2x 2N7002 N-Channel MOSFETs (Q1, Q2). Actually most SOT-23 package N-Channel MOSFET models will be fine.  
+* 2x 2N7002 SOT-23 N-Channel MOSFETs (Q1, Q2). Actually most SOT-23 package N-Channel MOSFET models will be fine.  
   https://www.nexperia.com/products/mosfets/small-signal-mosfets/2N7002.html
 * 4x SH 1.25mm 3-pin connectors, both through-hole and SMD types are acceptable.  
   <img src="doc/sh125_3p.jpg" width="50%">
@@ -103,7 +103,7 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
 * I measured the original springs, they're **0.3\*3\*10mm** (means 0.3mm steel wire diameter, 3mm outter diameter, 10mm free length, the first pair from the left). So if you want a heavier feel, you can use **0.35\*3\*10mm** (the second pair from the left), **0.4\*3\*10mm** (the third pair from the left), or even **0.3\*3\*8mm** (the last pair) tension springs.  
   <img src="doc/gimbal_springs.jpg" width="70%">
 * You need to unscrew all screws to replace both X and Y axis springs. The job looks difficult but after you do it once, you'll find it's not that hard.
-* You may feel the gimbal a little too bouncy, especially the X axis. You can apply some damping grease to the movement surface to reduce the bounce (put more on X-axis movement surface). I found Type-T03 is a good choice.  
+* You may feel the gimbal a little too bouncy, especially the X axis. You can apply some damping grease to the sliding surface to reduce the bounce (put more on X-axis sliding surface). I found Type-T03 is a good choice.  
   <img src="doc/damper_grease_1.jpg" width="45%"> <img src="doc/damper_grease_2.jpg" width="40%">
 
 ### Assembly
@@ -114,6 +114,7 @@ It's CC-NC. So DIY for yourself and for your friend, don't make money from it.
     <img src="doc/anti_slip_pads.jpg" width="40%">
   * 30AWG or 32AWG ultra-thin silicone (very soft) wires, better to have them in 4 colors.  
     https://www.amazon.com/StrivedayTM-Flexible-Silicone-electronic-electrics/dp/B01KQ2JNLI?th=1
+
 * Steps
   * Solder 4 thin silicone wires to gimbal PCBs and twist them together like a braid. It would be easier if you have different colors. My mapping is red to V, black to G, blue to LED and yellow to SW.  
     <img src="doc/gimbal_wires.jpg" width="50%">
