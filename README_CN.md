@@ -141,7 +141,7 @@ https://github.com/whowechina/
     <img src="doc/gimbal_stick6.jpg" width="45%">
     <img src="doc/gimbal_stick7.jpg" width="45%">
   * 用 M2.5 螺丝把外壳上部和底部固定在一起，在底部贴上硅胶防滑垫。  
-    <img src="doc/gimbal_screws.jpg" width="45%">
+    <img src="doc/bottom_screws.jpg" width="45%">
   * 测试一下，如果所有东西都工作正常，把打印的键帽压到巧克力轴上，完成！  
     <img src="doc/assembly_done.jpg" width="50%">
 
