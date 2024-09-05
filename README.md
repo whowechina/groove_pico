@@ -14,6 +14,10 @@ Thanks to many respectful guys/companies who made their tools or materials free 
 
 Special thanks to community developers that inspired me and helped me: CrazyRedMachine (https://github.com/CrazyRedMachine), asesidaa (https://github.com/asesidaa).
 
+And also:
+* RP_Silicon_KiCad: https://github.com/HeadBoffin/RP_Silicon_KiCad
+* Type-C: https://github.com/ai03-2725/Type-C.pretty
+
 ## Notes
 You can check out my other cool projects.
 

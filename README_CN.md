@@ -14,6 +14,10 @@
 
 感谢社区开发者的启发和帮助，比如 CrazyRedMachine (https://github.com/CrazyRedMachine), asesidaa (https://github.com/asesidaa).
 
+还有：
+* RP_Silicon_KiCad: https://github.com/HeadBoffin/RP_Silicon_KiCad
+* Type-C: https://github.com/ai03-2725/Type-C.pretty
+
 ## 其他项目
 你也可以查看我其他的酷炫项目。
 
