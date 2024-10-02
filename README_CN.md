@@ -38,6 +38,7 @@
 * Diva Pico: https://github.com/whowechina/diva_pico
 * AIC Pico: https://github.com/whowechina/aic_pico
 * Groove Pico: https://github.com/whowechina/groove_pico
+* Geki Pico: https://github.com/whowechina/geki_pico
 
 这个 Groove Pico 项目：
 * 大量依赖 3D 打印，所以你需要一个 3D 打印机。
@@ -51,7 +52,7 @@
 https://github.com/whowechina/
 
 ## 关于许可证
-它是 CC-NC 授权。所以你只能给自己和你的朋友 DIY，不能利用这个项目赚钱。
+它是 CC-NC 授权。所以你只能给自己和你的朋友 DIY，不能利用这个项目赚钱，连源作者都不敢提的抄袭或者稍微改改换个名字就更不可以了。
 
 ## 如何制作
 ### PCB
