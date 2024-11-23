@@ -61,7 +61,7 @@ static void disp_light()
     printf("  Level: %d.\n", groove_cfg->light.level);
     printf("  Colors:\n");
     printf("    base0: %s\n", color_str(groove_cfg->light.base[0], true));
-    printf("    base1: %s\n", color_str(groove_cfg->light.base[0], true));
+    printf("    base1: %s\n", color_str(groove_cfg->light.base[1], true));
     printf("    button: %s\n", color_str(groove_cfg->light.button, true));
     printf("    boost: %s\n", color_str(groove_cfg->light.boost, true));
     printf("    steer: %s\n", color_str(groove_cfg->light.steer, true));
