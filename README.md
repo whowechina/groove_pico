@@ -150,6 +150,13 @@ https://discord.gg/M8f2PPQFEA
   https://googlechromelabs.github.io/serial-terminal/
 * **NOTE:** You need to calibrate the gimbals by "gimbal calibrate" command after you flash the firmware.
 
+### Usage
+* Connect the Groove Pico to a Nintendo Switch or a PC, it will be recognized as a Switch controller.
+* Buttons on top the left and right joysticks are `L` and `R`.
+* There're three small aux buttons in the center:  
+  * If the middle one is not pressed, then left and right ones are `B` and `A`.
+  * If the middle one is pressed, then left and right ones become `-` and `+`.
+
 ## CAD Source File
 I'm using OnShape free subscription. It's powerful but it can't archive original designs to local, so I can only share the link here. STL/DXF/DWG files are exported from this online document.  
   https://cad.onshape.com/documents/97629d37ec7dd45f32c42fed/w/4cdf2d6010b5ce7b9283904a/e/c8e2720760e1863ce3a69460?renderMode=0&uiState=6693eade6539e17fa80ec4fb

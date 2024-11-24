@@ -150,6 +150,13 @@ https://discord.gg/M8f2PPQFEA
   https://googlechromelabs.github.io/serial-terminal/
 * **注意：** 你需要在烧录固件后使用 “gimbal calibrate” 命令来校准摇杆。
 
+### 使用
+* 连接 Groove Pico 到任天堂 Switch 或者 PC，它会被识别为一个 Switch 控制器。
+* 左右摇杆顶上的按钮是 `L` 和 `R`。
+* 中间有三个小按钮：
+  * 如果中间的按钮没有按下，左右两边就是 `B` 和 `A`。
+  * 如果中间的按钮按下，左右两边则变成 `-` 和 `+`。
+
 ## CAD Source File
 我使用的是 OnShape 的免费订阅。它很强大，但是它不能将原始设计存档到本地，所以我只能在这里分享链接。STL/DXF/DWG 文件是从这个在线文档导出的。  
   https://cad.onshape.com/documents/97629d37ec7dd45f32c42fed/w/4cdf2d6010b5ce7b9283904a/e/c8e2720760e1863ce3a69460?renderMode=0&uiState=6693eade6539e17fa80ec4fb
