@@ -174,7 +174,7 @@ static void mix_boost(int gimbal, int layer, int id, uint32_t color)
     }
 
     uint32_t base = load_color(&groove_cfg->light.base[layer][gimbal]);
-    uint32_t mixed = rgb32_add(base, apply_level(color));  
+    uint32_t mixed = rgb32_add(apply_level(base), apply_level(color));  
     gimbal_leds[layer][gimbal][id] = mixed;
 }
 
@@ -200,8 +200,8 @@ static void effect_button()
             right = load_color(&groove_cfg->light.button[1]);
         }
 
-        buf_left[8 + i] = left;
-        buf_right[11 - i] = right;
+        buf_left[8 + i] = apply_level(left);
+        buf_right[11 - i] = apply_level(right);
     }
 }
 
