@@ -18,7 +18,7 @@
 #define AXIS_MUX_PIN_B 20
 #define ADC_CHANNEL 0
 
-#define NKRO_KEYMAP "awsdjikl123"
+#define NKRO_KEYMAP "cmvbnawdsjilk"
 #else
 
 #endif

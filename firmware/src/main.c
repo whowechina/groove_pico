@@ -56,8 +56,7 @@ void report_usb_hid()
         if (groove_cfg->hid.joy) {
             tud_hid_n_report(0x00, 0, &hid_joy, sizeof(hid_joy));
         }
-        if (groove_cfg->hid.nkro &&
-            (memcmp(&hid_nkro, &sent_hid_nkro, sizeof(hid_nkro)) != 0)) {
+        if (groove_cfg->hid.nkro) {
             sent_hid_nkro = hid_nkro;
             tud_hid_n_report(0x02, 0, &sent_hid_nkro, sizeof(sent_hid_nkro));
         }
@@ -99,19 +98,55 @@ static void gen_joy_report()
 }
 
 const uint8_t keycode_table[128][2] = { HID_ASCII_TO_KEYCODE };
-const uint8_t keymap[38 + 1] = NKRO_KEYMAP; // 32 keys, 6 air keys, 1 terminator
+const uint8_t keymap[] = NKRO_KEYMAP; // 32 keys, 6 air keys, 1 terminator
+
+static void nkro_markup(uint8_t ascii, bool pressed)
+{
+    if (ascii >= 128) {
+        return;
+    }
+    uint8_t code = keycode_table[ascii][1];
+    uint8_t byte = code / 8;
+    uint8_t bit = code % 8;
+    if (pressed) {
+        hid_nkro.keymap[byte] |= (1 << bit);
+    } else {
+        hid_nkro.keymap[byte] &= ~(1 << bit);
+    }
+}
+
+static void gen_nkro_dir(int channel)
+{
+    int amp = gimbal_get_amp(channel);
+    if (amp < 1600) {
+        return;
+    }
+    const uint8_t *dirkey = &keymap[5] + channel * 4;
+    nkro_markup(dirkey[0], false);
+    nkro_markup(dirkey[0], false);
+    nkro_markup(dirkey[0], false);
+    nkro_markup(dirkey[0], false);
+
+    int dir = gimbal_get_dir(channel);
+    nkro_markup(dirkey[0], (dir == 0) || (dir == 1) || (dir == 7));
+    nkro_markup(dirkey[1], (dir == 1) || (dir == 2) || (dir == 3));
+    nkro_markup(dirkey[2], (dir == 3) || (dir == 4) || (dir == 5));
+    nkro_markup(dirkey[3], (dir == 5) || (dir == 6) || (dir == 7));
+}
+
 static void gen_nkro_report()
 {
-    for (int i = 0; i < 6; i++) {
-        uint8_t code = keycode_table[keymap[32 + i]][1];
-        uint8_t byte = code / 8;
-        uint8_t bit = code % 8;
-        if (hid_joy.buttons & (1 << i)) {
-            hid_nkro.keymap[byte] |= (1 << bit);
-        } else {
-            hid_nkro.keymap[byte] &= ~(1 << bit);
-        }
+    if (!groove_cfg->hid.nkro) {
+        return;
     }
+
+    uint16_t button = button_read();
+    for (int i = 0; i < 5; i++) {
+        nkro_markup(keymap[i], button & (1 << i));
+    }
+
+    gen_nkro_dir(0);
+    gen_nkro_dir(1);
 }
 
 static uint64_t last_hid_time = 0;
@@ -130,8 +165,12 @@ static void run_lights()
     light_set_aux(1, button & 0x08);
     light_set_aux(2, button & 0x10);
 
-    light_steer_left(gimbal_get_dir(0));
-    light_steer_right(gimbal_get_dir(1));
+    if (gimbal_get_amp(0) > 1600) {
+        light_steer_left(gimbal_get_dir(0));
+    }
+    if (gimbal_get_amp(1) > 1600) {
+        light_steer_right(gimbal_get_dir(1));
+    }
 }
 
 static void run_haptics()
@@ -158,6 +197,7 @@ static void core1_loop()
 
 static void core0_loop()
 {
+    uint64_t next_frame = 0;
     while(1) {
         tud_task();
 
@@ -172,7 +212,10 @@ static void core0_loop()
         gen_nkro_report();
         report_usb_hid();
     
-        sleep_us(600);
+        while (time_us_64() < next_frame) {
+            sleep_us(100);
+        }
+        next_frame += 1000; // 1000 fps
     }
 }
 

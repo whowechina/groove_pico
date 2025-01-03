@@ -116,13 +116,20 @@ int gimbal_get_dir(int gimbal)
     int x = gimbal_read(gimbal ? GIMBAL_RIGHT_X : GIMBAL_LEFT_X) - 2048;
     int y = 2048 - gimbal_read(gimbal ? GIMBAL_RIGHT_Y : GIMBAL_LEFT_Y);
 
-    int radius2 = x * x + y * y;
-    if (radius2 < 2047 * 2047 * 7 / 8) {
-        return -1;
-    }
-
     int angle = (atan2(y, x) + M_PI * 13 / 8) * 4 / M_PI;
     int dir = angle % 8;
 
     return dir;
+}
+
+int gimbal_get_amp(int gimbal)
+{
+    if (gimbal >= 2) {
+        return -1;
+    }
+
+    int x = gimbal_read(gimbal ? GIMBAL_RIGHT_X : GIMBAL_LEFT_X) - 2048;
+    int y = 2048 - gimbal_read(gimbal ? GIMBAL_RIGHT_Y : GIMBAL_LEFT_Y);
+
+    return sqrt(x * x + y * y);
 }
