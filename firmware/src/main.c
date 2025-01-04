@@ -212,10 +212,8 @@ static void core0_loop()
         gen_nkro_report();
         report_usb_hid();
     
-        while (time_us_64() < next_frame) {
-            sleep_us(100);
-        }
-        next_frame += 1000; // 1000 fps
+        sleep_until(next_frame);
+        next_frame += 1001; // Slightly lower than 1KHz
     }
 }
 
