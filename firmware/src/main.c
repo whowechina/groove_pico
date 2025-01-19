@@ -41,7 +41,7 @@ struct __attribute__((packed)) {
 	uint8_t rx;
 	uint8_t ry;
     uint8_t vendor;
-} hid_joy;
+} hid_joy, sent_hid_joy;
 
 struct __attribute__((packed)) {
     uint8_t modifier;
@@ -53,8 +53,11 @@ void report_usb_hid()
     if (tud_hid_ready()) {
         hid_joy.HAT = 0x08;
         hid_joy.vendor = 0;
-        if (groove_cfg->hid.joy) {
-            tud_hid_n_report(0x00, 0, &hid_joy, sizeof(hid_joy));
+        if (groove_cfg->hid.joy && 
+            (memcmp(&hid_joy, &sent_hid_joy, sizeof(hid_joy)) != 0)) {
+            if (tud_hid_n_report(0x00, 0, &hid_joy, sizeof(hid_joy))) {
+                memcpy(&sent_hid_joy, &hid_joy, sizeof(hid_joy));
+            }
         }
         if (groove_cfg->hid.nkro) {
             sent_hid_nkro = hid_nkro;
@@ -275,13 +278,6 @@ int main(void)
     return 0;
 }
 
-
-struct __attribute__((packed)) {
-    uint16_t buttons;
-    uint8_t  HAT;
-    uint32_t axis;
-} hid_joy_out = {0};
-
 // Invoked when received GET_REPORT control request
 // Application must fill buffer report's content and return its length.
 // Return zero will cause the stack to STALL request
@@ -289,7 +285,6 @@ uint16_t tud_hid_get_report_cb(uint8_t itf, uint8_t report_id,
                                hid_report_type_t report_type, uint8_t *buffer,
                                uint16_t reqlen)
 {
-    printf("Get from USB %d-%d\n", report_id, report_type);
     return 0;
 }
 
