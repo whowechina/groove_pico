@@ -64,10 +64,11 @@ https://discord.gg/M8f2PPQFEA
   https://www.nexperia.com/products/mosfets/small-signal-mosfets/2N7002.html
 * 4x SH 1.25mm 3-pin connectors, both through-hole and SMD types are acceptable.  
   <img src="doc/sh125_3p.jpg" width="50%">
-* 8x 0603 0.1uF (0.1~1uF all fine) capacitors (C1 to C8), OPTIONAL but strongly recommended.
+* 9x 0603 0.1uF (0.1~1uF all fine) capacitors (C1 to C9), OPTIONAL but recommended.
 * 2x 0603 5.1kohm resistors (R1, R2) for the USB.
 * 5x 0603 10ohm resistors, (1-20ohm all work fine) (R3-R7).
-* Just leave U3 and C9 empty. They're for stabilizing the ADC reference voltage, but I think it's just a placebo effect.
+* 1x LM4040A30IDBZ 3.0V shunt voltage reference (U3, SOT23-3), OPTIONAL but recommended. Model can be different, as long as it's a SOT23-3 3.0V shunt voltage reference.
+* 1x 0603 100ohm resistor (R5), mandatory when U3 is present.
 * 2x Kailh choc v1 switches, use light linear ones (around 35gf), such as "Red Pro".  
   <img src="doc/choc_v1_red_pro.jpg" width="30%">
 * 3x ALPS SKPMAME010 or Panasonic EVQP1K05M 6mm square tactile switches, You can use either one exclusively or a combination of both.  
@@ -155,9 +156,10 @@ https://discord.gg/M8f2PPQFEA
 ### Usage
 * Connect the Groove Pico to a Nintendo Switch or a PC, it will be recognized as a Switch controller.
 * Buttons on top the left and right joysticks are `L` and `R`.
-* There're three small aux buttons in the center:  
-  * If the middle one is not pressed, then left and right ones are `B` and `A`.
-  * If the middle one is pressed, then left and right ones become `-` and `+`.
+* There're three small aux buttons in the center, they are `B`, `SHIFT` and `A` respectively. If `SHIFT` is pressed:
+  * The other two become `-` and `+`.
+  * The joystick buttons become `Y` and `X`.
+  * Left joystick works as `D-PAD`.
 
 ## CAD Source File
 I'm using OnShape free subscription. It's powerful but it can't archive original designs to local, so I can only share the link here. STL/DXF/DWG files are exported from this online document.  

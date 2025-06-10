@@ -64,10 +64,11 @@ https://discord.gg/M8f2PPQFEA
   https://www.nexperia.com/products/mosfets/small-signal-mosfets/2N7002.html
 * 4x SH 1.25mm 3 针插座, 通孔或者贴片的都可以。  
   <img src="doc/sh125_3p.jpg" width="50%">
-* 8x 0603 0.1uF (0.1~1uF 都行) 贴片电容 (C1 to C8), 可选，但是最好都焊上。
+* 9x 0603 0.1uF (0.1~1uF 都行) 贴片电容 (C1 to C9), 可选，但是最好都焊上。
 * 2x 0603 5.1kohm 贴片电阻 (R1, R2) ，用于 USB 电流识别。
 * 5x 0603 10ohm 贴片电阻，(1-20ohm 都行) (R3-R7)。
-* U3 和 C9 不用焊接。它们是用来稳定 ADC 参考电压的，但我认为这只是心理安慰。
+* 1x LM4040A30IDBZ 3.0V 并联电压基准，(U3, SOT23-3), 可选，但是建议焊上，型号可以不一样，但必须是 SOT23-3 封装的 3.0V 并联基准。
+* 1x 0603 100ohm 贴片电阻 (R5), U3 焊上的时候，这个电阻也必须焊上。
 * 2x 凯华巧克力 v1 键轴，用轻力度的线线性轴 (35 克力上下的)，比如下面这个 "Red Pro".  
   <img src="doc/choc_v1_red_pro.jpg" width="30%">
 * 3x ALPS SKPMAME010 或者松下 EVQP1K05M 6 毫米 方型轻触开关，这俩都能用，你甚至可以组合使用。  
