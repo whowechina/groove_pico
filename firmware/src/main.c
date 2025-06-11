@@ -51,8 +51,6 @@ struct __attribute__((packed)) {
 void report_usb_hid()
 {
     if (tud_hid_ready()) {
-        hid_joy.HAT = 0x08;
-        hid_joy.vendor = 0;
         if (groove_cfg->hid.joy && 
             (memcmp(&hid_joy, &sent_hid_joy, sizeof(hid_joy)) != 0)) {
             if (tud_hid_n_report(0x00, 0, &hid_joy, sizeof(hid_joy))) {
@@ -80,23 +78,56 @@ void report_usb_hid()
 #define SWITCH_BIT_R3      (1U << 11)
 #define SWITCH_BIT_HOME    (1U << 12)
 
+#define BUTTON_SHIFT 0x08
+#define BUTTON_AUX1 0x04
+#define BUTTON_AUX2 0x10
+#define BUTTON_LEFT 0x01
+#define BUTTON_RIGHT 0x02
+
 static void gen_joy_report()
 {
-    hid_joy.lx = gimbal_read(GIMBAL_LEFT_X) >> 4;
-    hid_joy.ly = gimbal_read(GIMBAL_LEFT_Y) >> 4;
-    hid_joy.rx = gimbal_read(GIMBAL_RIGHT_X) >> 4;
-    hid_joy.ry = gimbal_read(GIMBAL_RIGHT_Y) >> 4;
+    hid_joy.vendor = 0;
+    hid_joy.buttons = 0;
+    hid_joy.HAT = 0x08;
 
     uint16_t button = button_read();
-    hid_joy.buttons = 0;
-    hid_joy.buttons |= (button & 0x01) ? SWITCH_BIT_L : 0;
-    hid_joy.buttons |= (button & 0x02) ? SWITCH_BIT_R : 0;
-    if (button & 0x08) {
-        hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_MINUS : 0;
-        hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_PLUS : 0;
+    if (button & BUTTON_SHIFT) {
+        hid_joy.lx = 128;
+        hid_joy.ly = 128;
+        hid_joy.rx = 128;
+        hid_joy.ry = 128;
+        hid_joy.buttons |= (button & BUTTON_LEFT) ? SWITCH_BIT_Y : 0;
+        hid_joy.buttons |= (button & BUTTON_RIGHT) ? SWITCH_BIT_X : 0;
+        hid_joy.buttons |= (button & BUTTON_AUX1) ? SWITCH_BIT_MINUS : 0;
+        hid_joy.buttons |= (button & BUTTON_AUX2) ? SWITCH_BIT_PLUS : 0;
+
+        static bool dpad_active = false;
+        static uint8_t last_dpad = 0x08;
+
+        if (dpad_active) {
+            if (gimbal_get_amp(0) < 1200) {
+                dpad_active = false;
+                last_dpad = 0x08;
+            } else {
+                last_dpad = gimbal_get_dir(0);
+            }
+        } else {
+            if (gimbal_get_amp(0) > 1600) {
+                dpad_active = true;
+                last_dpad = gimbal_get_dir(0);
+            }
+        }
+
+        hid_joy.HAT = last_dpad;
     } else {
-        hid_joy.buttons |= (button & 0x04) ? SWITCH_BIT_B : 0;
-        hid_joy.buttons |= (button & 0x10) ? SWITCH_BIT_A : 0;
+        hid_joy.lx = gimbal_read(GIMBAL_LEFT_X) >> 4;
+        hid_joy.ly = gimbal_read(GIMBAL_LEFT_Y) >> 4;
+        hid_joy.rx = gimbal_read(GIMBAL_RIGHT_X) >> 4;
+        hid_joy.ry = gimbal_read(GIMBAL_RIGHT_Y) >> 4;
+        hid_joy.buttons |= (button & BUTTON_LEFT) ? SWITCH_BIT_L : 0;
+        hid_joy.buttons |= (button & BUTTON_RIGHT) ? SWITCH_BIT_R : 0;
+        hid_joy.buttons |= (button & BUTTON_AUX1) ? SWITCH_BIT_B : 0;
+        hid_joy.buttons |= (button & BUTTON_AUX2) ? SWITCH_BIT_A : 0;
     }
 }
 
