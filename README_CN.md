@@ -21,11 +21,11 @@
 ## 其他项目
 你也可以查看我其他的酷炫项目。
 
-<img src="https://github.com/whowechina/popn_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/iidx_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/iidx_teeny/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/chu_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/mai_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/diva_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/aic_pico/raw/main/doc/main.gif" height="100px"> <img src="https://github.com/whowechina/groove_pico/raw/main/doc/main.gif" height="100px">  <img src="https://github.com/whowechina/geki_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/musec_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/ju_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/bishi_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/nos_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/popn_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/iidx_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/chu_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/mai_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/diva_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/aic_pico/raw/main/doc/main.gif" height="100px"> <img src="https://github.com/whowechina/groove_pico/raw/main/doc/main.gif" height="100px">  <img src="https://github.com/whowechina/geki_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/musec_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/ju_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/bishi_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/nos_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/voltex_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/chord_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/dance_pico/raw/main/doc/main.jpg" height="100px">
+<img src="https://github.com/whowechina/arcade_pico/raw/main/doc/main.jpg" height="100px"> <img src="https://github.com/whowechina/rock_pico/raw/main/doc/main.jpg" height="100px">
 
 * Popn Pico: https://github.com/whowechina/popn_pico
 * IIDX Pico: https://github.com/whowechina/iidx_pico
-* IIDX Teeny: https://github.com/whowechina/iidx_teeny
 * Chu Pico: https://github.com/whowechina/chu_pico
 * Mai Pico: https://github.com/whowechina/mai_pico
 * Diva Pico: https://github.com/whowechina/diva_pico
@@ -35,18 +35,24 @@
 * Musec Pico: https://github.com/whowechina/musec_pico
 * Ju Pico: https://github.com/whowechina/ju_pico
 * Bishi Pico: https://github.com/whowechina/bishi_pico
-* Bishi Pico: https://github.com/whowechina/nos_pico
+* Nos Pico: https://github.com/whowechina/nos_pico
+* Voltex Pico: https://github.com/whowechina/voltex_pico
+* Chord Pico: https://github.com/whowechina/chord_pico
+* Dance Pico: https://github.com/whowechina/dance_pico
+* Arcade Pico: https://github.com/whowechina/arcade_pico
+* Rock Pico: https://github.com/whowechina/rock_pico
+
 
 ## **声明** ##
 我在个人时间内制作了这个项目，没有任何经济利益或赞助。我将继续改进这个项目。我已尽我所能确保所有内容的准确性和功能性，但总有可能出现错误。如果你因使用这个开源项目而造成时间或金钱的损失，我不能负责。感谢你的理解。
 
 ## 关于许可证
-它是 CC-NC 授权。所以你只能给自己和你的朋友 DIY，不能利用这个项目赚钱，比如收费的代做，出售整机等，连源作者都不敢提的抄袭或者稍微改改换个名字来打擦边球就更不可以了。注意团购和拼单订购原始元器件是合理的，非盈利的方式卖掉剩余的元器件也是可以接受的。
+它是 CC-NC 授权。所以你只能给自己和你的朋友 DIY，不能利用这个项目赚钱，比如收费的代做，出售整机等，连源作者都不敢提的抄袭，或者稍微改改换个名字来打擦边球，这些都是不允许的。注意团购和拼单订购原始元器件是合理的，非盈利的方式卖掉剩余的元器件也是可以接受的。
 
-如果希望找我购买成品或者商用授权，请联系我（Discord，QQ 群，闲鱼，微信群或者在 issue 区留下你的联系方式）。
-
-## 我的 Discord 服务器邀请
-https://discord.gg/M8f2PPQFEA
+如果希望找我购买成品或者获取商用授权，请联系我（Discord，QQ 群，闲鱼）。
+* Discord 服务器邀请：https://discord.gg/M8f2PPQFEA
+* QQ 群：854535476
+* 闲鱼：whowe12345
 
 ## 如何制作
 ### PCB
@@ -66,9 +72,9 @@ https://discord.gg/M8f2PPQFEA
   <img src="doc/sh125_3p.jpg" width="50%">
 * 9x 0603 0.1uF (0.1~1uF 都行) 贴片电容 (C1 to C9), 可选，但是最好都焊上。
 * 2x 0603 5.1kohm 贴片电阻 (R1, R2) ，用于 USB 电流识别。
-* 5x 0603 10ohm 贴片电阻，(1-20ohm 都行) (R3-R7)。
+* 5x 0603 10ohm 贴片电阻，(1-100ohm 都行) (R3-R4)。
 * 1x LM4040A30IDBZ 3.0V 并联电压基准，(U3, SOT23-3), 可选，但是建议焊上，型号可以不一样，但必须是 SOT23-3 封装的 3.0V 并联基准。
-* 1x 0603 100ohm 贴片电阻 (R5), U3 焊上的时候，这个电阻也必须焊上。
+* 1x 0603 100ohm 贴片电阻 (33-100ohm 都行) (R5), U3 焊上的时候，这个电阻也必须焊上。
 * 2x 凯华巧克力 v1 键轴，用轻力度的线线性轴 (35 克力上下的)，比如下面这个 "Red Pro".  
   <img src="doc/choc_v1_red_pro.jpg" width="30%">
 * 3x ALPS SKPMAME010 或者松下 EVQP1K05M 6 毫米 方型轻触开关，这俩都能用，你甚至可以组合使用。  
